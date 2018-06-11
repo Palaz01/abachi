@@ -82,14 +82,14 @@
   <!--header starts here-->
   <div id="header">
     <!--share box starts here-->
-    <div class="share_box">
+    <!--<div class="share_box">
       <a href="http://twitter.com/?status=Most%20olvasom:{$ezazurl}" target="_blank" title="Megosztás Twitteren" class="csillag"></a>
       <a href="http://www.facebook.com/sharer.php?u={$ezazurl}" target="_blank" title="Facebook" class="facebook"></a>
-    </div>
+    </div>-->
     <!--share box ends here-->
     
     
-    <img class="logo" src="images/logo.png" alt="" title="" />
+    <!--<img class="logo" src="images/logo.png" alt="" title="" />-->
     
     
     <!--header img pager starts here-->
@@ -97,10 +97,16 @@
       {foreach from=$mainpageboxes item=box name=mpbi}
       <img {if $smarty.foreach.mpbi.first}class="first"{/if} src="{#pt#}upload/mainpagebox/{$box.image}&amp;w=951&amp;h=469&amp;zc=1" alt="" title="" width="951" height="496" />
       {/foreach}
-      
-      {foreach from=$mainpageboxes item=box name=mpbt}
-      <p {if $smarty.foreach.mpbt.first}class="first"{/if}>{$box.boxtext}</p>
-      {/foreach}
+
+      <div class="slider_text">
+        <div>
+          <h2>Egyedi infra szauna építés</h2>
+          {foreach from=$mainpageboxes item=box name=mpbt}
+          <p {if $smarty.foreach.mpbt.first}class="first"{/if}>{$box.boxtext}</p>
+          {/foreach}
+        </div>
+        <a href="#" class="details-btn">részletek</a>
+      </div>
       
       
       <div class="sliderControl">
@@ -109,6 +115,17 @@
         {/foreach}      
       </div>
     </div>
+
+    <ul id="slider_products">
+      <li><a href="#">Egyedi finn szauna építés</a></li>
+      <li><a href="#">Egyedi infra szauna építés</a></li>
+      <li><a href="#">Egyedi kombi szauna építés</a></li>
+      <li><a href="#">Egyedi bio szauna építés</a></li>
+      <li><a href="#">Egyedi só szauna építés</a></li>
+      <li><a href="#">Egyedi hordó szauna ház építés</a></li>
+      <li><a href="#">Egyedi gőzkabin építés</a></li>
+      <li><a href="#">Egyedi kül- és beltéri dézsafürdő építés</a></li>
+    </ul>
     <!--header img pager ends here-->
   </div>
   <!--header ends here-->
