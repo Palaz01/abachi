@@ -1,0 +1,87 @@
+body 
+{
+	background-color: #fff;
+	font: Verdana;
+	margin: 0;
+	padding: 0;
+}
+.admin-button {
+  color: #1C5E55;
+  background-color: #e3eaeb;
+  border-color: #C5BBAF;
+  border-width: 1px;
+  border-style: Solid;
+  font-family: Verdana;
+  font-size: 10pt;
+  padding: 1px;
+}
+.admin-select {
+  background-color:#e3eaeb;
+  font-family:Verdana;
+  font-size: 10pt;
+}
+.admin-text {
+  font-size: 10pt;
+}
+.msg-error {
+  color: #f00;
+}
+.msg-ok {
+  color: #000;
+}
+.maingrid th {
+  color: #fff;  
+  background-color: #1c5e55;
+  padding: 3px;
+  margin: 3px;
+}
+.odd {
+  background-color: rgb(241,248,238);
+  vertical-align: center;
+  text-align: left;  
+}
+.even {
+  background-color: rgb(219,230,221);
+  vertical-align: center;
+  text-align: left;  
+}
+.menutd {
+  vertical-align: top; 
+  font-family: Arial;
+  font-size: 12px;
+  width: 200px; 
+  background-color: #1c5e55; 
+  border: 2px solid #ccc; 
+  border-right: 1px solid #000;
+  padding-left: 15px;
+  padding-top: 35px;
+}
+.menutd li {
+  list-style: none;
+}
+.menutd a {
+  color: #ddd;
+  font-size: 14px;
+  font-weight: bold;        
+  text-decoration: none;
+}
+.menutd a:hover {
+  color: #ff0;  
+}
+.contenttd {
+  vertical-align: top;  
+  background-color: rgb(230, 230, 230);
+  width: 800px;
+  border: 2px solid #ddd; 
+  border-left: 0px;
+}
+.menutitle {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;  
+}
+#admin-selectedmenu
+{
+  background-color: rgb(201, 200, 130); 
+  color: #000;
+}

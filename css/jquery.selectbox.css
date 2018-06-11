@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+
+/*.jquery-selectbox .item-0 {background: url(../images/gb_flag.gif) no-repeat right center;}*/
+ 
+.jquery-selectbox {
+	position: relative;
+	height: 20px !important;
+	width: 170px !important;
+	padding: 0 !important;
+	z-index: 0;
+	float: right !important;
+	display: inline;
+	/*margin: 4px 4px 4px 0;*/
+	font-size: 9px;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #444;
+	background-image: url("../images/select/bg-TextField.gif");
+}
+.jquery-selectbox.selecthover {
+	border-color: #9F7627;
+	background-color: #FFFCDF;
+	background-image: url("../images/select/bg-TextFieldFocused.gif");
+	z-index: 700;
+}	
+.jquery-selectbox .jquery-selectbox-currentItem {
+	padding: 3px 0px 0px 3px;
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
+	color: #d1d3d4;
+  font-size: 11px;
+}
+
+.jquery-selectbox .jquery-selectbox-list {
+	display: none;
+	position: absolute;
+	top: 16px;
+	padding: 2px;
+	left: 0px;
+	background-color: black;
+	width: 170px !important;
+	/*height: 120px;*/
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index: 1000;
+	border: 1px solid #7f7e7e;
+}
+.jquery-selectbox .jquery-selectbox-moreButton {
+	/*
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	*/
+	float: left !important;
+	width: 26px !important;
+	height: 18px !important;
+	cursor: pointer;
+}
+.jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
+	/*background: url("../images/select/lay-selectMoreButtonHover.gif");*/
+}
+
+.jquery-selectbox .jquery-selectbox-item.listelementhover {
+	/*background: #87683d;*/
+	color: red;
+}
+.jquery-selectbox .jquery-selectbox-item {
+	display: block;
+	cursor: default;
+	color: #d1d3d4;
+  font-size: 11px;
+  padding-left: 26px;
+  line-height: 18px;
+}
+
+.hun {background: url(../images/hun_flag.gif) no-repeat;}
+.eng {background: url(../images/gb_flag.gif) no-repeat;}
+.fra {background: url(../images/fra_flag.gif) no-repeat;}
+.esp {background: url(../images/esp_flag.gif) no-repeat;}
+.de {background: url(../images/de_flag.gif) no-repeat;}
+.jap {background: url(../images/jap_flag.gif) no-repeat;}
+.por {background: url(../images/por_flag.gif) no-repeat;}
+.it {background: url(../images/it_flag.gif) no-repeat;}
+.pol {background: url(../images/pol_flag.gif) no-repeat;}
+.ru {background: url(../images/ru_flag.gif) no-repeat;}
+
+.select div div .hun, .select div div .eng, .select div div .fra, .select div div .esp, .select div div .de, .select div div .jap, .select div div .por, .select div div .it, .select div div .pol, .select div div .ru {background-position: 125px 2px;}
+.select span.hun, .select span.eng, .select span.fra, .select span.esp, .select span.de, .select span.jap, .select span.por, .select span.it, .select span.pol, .select span.ru {background-position: 102px 3px;}
+
+
+/** ERROR classes **/
+form .error .jquery-selectbox {
+	color: #d00;
+	border-color: #d00;
+	background-image: url("../images/select/bg-TextFieldError.gif");
+}
