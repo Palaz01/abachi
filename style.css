@@ -172,6 +172,11 @@ p {line-height: 18px;}
   text-decoration: none;
 }
 
+.slider_text .details-btn:hover {
+  background: #272727;
+  color: #fff;
+}
+
 .headerImgPager .sliderControl {
   overflow: hidden;
   position: absolute;
@@ -772,7 +777,11 @@ p {line-height: 18px;}
   white-space: nowrap;
 }
 
-.new_stuff_box .details_link:hover {}
+.new_stuff_box .details_link:hover,
+.news_box .more:hover {
+  background: #c06d32;
+  color: #fff;
+}
 
 .new_stuff_box .cart_link {
   font-size: 14px;
@@ -780,10 +789,16 @@ p {line-height: 18px;}
   padding: 13px 0px;
   text-decoration: none;
   background: #383838;
+  border: 1px solid #383838;
   color: #fff;
   width: 130px;
   display: flex;
   justify-content: center;
+}
+
+.new_stuff_box .cart_link:hover {
+  background: #505050;
+  border-color: #505050;
 }
 
 
