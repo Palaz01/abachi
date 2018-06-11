@@ -254,7 +254,7 @@ p {line-height: 18px;}
   white-space: nowrap;
 }
 
-#main_menu ul {
+#main_menu .main-menu-items {
   height: 55px;
 }
 
@@ -268,7 +268,7 @@ p {line-height: 18px;}
   color: white;
 }
 
-#main_menu a {
+#main_menu li a {
   color: #262626;
   font-size: 14px;
   font-family: Arial;
@@ -309,30 +309,33 @@ p {line-height: 18px;}
 }
 
 .submenu {
-  background: url(images/subMenu.jpg) repeat-x;
-  color: white !important;
+  background: rgba(48, 48, 48, .9);
+  color: white;
   display: none;
-  left: 11px;  top: 53px;
-  padding: 0 !important;
+  padding: 10px 20px;
   position: absolute;
-  width: 968px;  height: 41px !important;
+  width: 230px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   z-index: 10;
 }
-.submenu li {
-  background: none !important;
-  padding: 0 !important;
+#main_menu .submenu li {
+  border: none;
 }
-.submenu a {
-  color: white !important;
-  display: inline !important;
-  font-size: 13px !important;  font-weight: bold !important;
-  line-height: 40px !important;
+#main_menu .submenu li a {
+  color: rgba(254, 254, 254, 0.6);
+  font-size: 13px;
+  line-height: 1.54;
+  text-transform: none;
+  padding: 10px 0;
   margin: 0;
-  padding: 0 8px !important;     
+  height: 100%;
+  text-align: left;
 }
-.submenu a:hover {
-  background: none !important;
-  text-decoration: underline !important;  
+#main_menu .submenu li a:hover {
+  background: none;
+  color: #fff;
 }
 
 

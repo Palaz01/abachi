@@ -51,14 +51,16 @@
           <ul class="submenu">
             {foreach from=$topFixCategories item=topfix name=tfmf}
             <li>
-              <a href="{$topfix.filename}{#ext#}" title="{$topfix.title}">{$topfix.title}</a>{if !$smarty.foreach.tfmf.last}|{/if}
+              <a href="{$topfix.filename}{#ext#}" title="{$topfix.title}">{$topfix.title}</a>{if !$smarty.foreach.tfmf.last}{/if}
             </li>
             {/foreach}
           </ul>
         </li>
         <li><a href="{$szolg}" title="Szauna szolgáltatásaink">Szauna szolgáltatásaink</a></li>
         <li><a href="{$cegbemutato}" title="Bemutatóterem">Bemutatóterem</a></li>
-        <li><a href="{$webshopFilename}" title="Szauna termékek">Szauna termékek</a></li>
+        <li>
+          <a href="{$webshopFilename}" title="Szauna termékek">Szauna termékek</a>
+        </li>
         <!--<li><a href="{$discountFilename}" title="Újdonságok">Újdonságok</a></li>
         <li><a href="{$webshopFilename}" title="Webshop">Webshop</a></li>-->
 
