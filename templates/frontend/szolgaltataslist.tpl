@@ -17,11 +17,7 @@
               <div class="text_container">
                 <p><b>{$article.intro|nl2br}</b></p>
                 
-                <a href="{$article.filename}.html" title="{$article.moretitle}" class="more">
-                  <span class="left"></span>
-                  <span class="repeat">{$article.morelink}</span>
-                  <span class="right"></span>
-                </a>
+                <a href="{$article.filename}.html" title="{$article.moretitle}" class="more">{$article.morelink}</a>
                 <br class="clear" />
               </div>
               <br class="clear" />

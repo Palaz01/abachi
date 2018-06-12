@@ -18,11 +18,7 @@
               <div class="text_container">
                 <p><b>{$article.intro|nl2br}</b></p>
                 
-                <a href="{$article.filename}.html" title="" class="more">
-                  <span class="left"></span>
-                  <span class="repeat">TOVÁBB</span>
-                  <span class="right"></span>
-                </a>
+                <a href="{$article.filename}.html" title="" class="more">TOVÁBB</a>
                 <br class="clear" />
               </div>
               <br class="clear" />

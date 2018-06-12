@@ -37,7 +37,6 @@ body {
   color: #5a3512;
     background: #FCFFE6;
 }
-.subpage {background: #e8be82 url(images/body_bg_subpage.jpg) no-repeat center top;}
 
 #content_wrapper {
   /*padding-top: 8px;*/  
@@ -799,10 +798,6 @@ p {line-height: 18px;}
 
 .new_stuff_box img, .new_stuff_box .text_container {float: left;}
 
-.news_list_page .item img, .product_list_page img, .kapcsolodo_termek img {
-  border: 3px solid #bab293;
-  margin-right: 10px;  
-}
 
 .new_stuff_box .text_container h2, .new_stuff_box .text_container p {color: #5a3512;}
 
@@ -855,7 +850,8 @@ p {line-height: 18px;}
 }
 
 .new_stuff_box .details_link,
-.news_box .more {
+.news_box .more,
+.news_list_page .more {
   width: 84px;
   color: #c06d32;
   border: 1px solid #c06d32;
@@ -869,7 +865,8 @@ p {line-height: 18px;}
 }
 
 .new_stuff_box .details_link:hover,
-.news_box .more:hover {
+.news_box .more:hover,
+.news_list_page .more:hover {
   background: #c06d32;
   color: #fff;
 }
@@ -954,10 +951,9 @@ p {line-height: 18px;}
 
 .news_box .item .text_container p, .news_list_page .item .text_container p {margin-bottom: 10px;}
 
-.news_list_page .more, .news_list_page .more span {
-  display: block;
-  height: 29px; line-height: 29px;
-  float: left;  
+.news_list_page .more {
+  display: flex;
+  width: 120px;
 }
 
 .news_box .more {
@@ -1007,7 +1003,7 @@ p {line-height: 18px;}
 
 
 /*----------STATIC PAGE START----------*/
-.static_page, .news_list_page, .news_view_page, .registration_page, .product_list_page, .product_view_page, .cart_page, .detailed_search_page {
+.static_page, .news_view_page, .registration_page, .product_list_page, .product_view_page, .cart_page, .detailed_search_page {
   width: 708px;
   margin-top: 45px; margin-bottom: 15px;
   position: relative;
@@ -1043,7 +1039,7 @@ p {line-height: 18px;}
   text-transform: uppercase;
 }
 
-.static_page .repeat, .news_list_page .repeat, .news_view_page .repeat, .registration_page .form, .product_list_page .container, .product_view_page .container, .cart_page .container, .detailed_search_page .repeat {
+.static_page .repeat, .news_view_page .repeat, .registration_page .form, .product_list_page .container, .product_view_page .container, .cart_page .container, .detailed_search_page .repeat {
   background: url(images/static_page_repeat.gif) repeat-y;
   padding: 20px 0 20px 15px;  
 }
@@ -1061,36 +1057,45 @@ p {line-height: 18px;}
 
 .static_page ol li, .news_view_page ol li {list-style: decimal;}
 
-.static_page .bottom, .news_list_page .bottom, .news_view_page .bottom, .product_list_page .bottom, .product_view_page .bottom{
+.static_page .bottom, .news_view_page .bottom, .product_list_page .bottom, .product_view_page .bottom{
   background: url(images/static_page_bottom.png) no-repeat;
   height: 31px;  line-height: 31px;
 }
 
-.static_page .bottom, .product_list_page .bottom, .product_view_page .bottom, .news_list_page .bottom {
+.static_page .bottom, .product_list_page .bottom, .product_view_page .bottom {
   background: url(images/staticPageBottom.png) no-repeat;
   height: 25px;  line-height: 25px;  
 }
 
-.static_page .bottom a, .news_view_page .bottom a, .product_view_page .bottom a, .news_list_page .bottom a {
+.static_page .bottom a, .news_view_page .bottom a, .product_view_page .bottom a {
   text-decoration: underline;
   color: #393939;
   font-weight: bold;  
 }
 
-.static_page .bottom a:hover, .news_view_page .bottom a:hover, .product_view_page .bottom a:hover, .news_list_page .bottom a:hover {text-decoration: none;}
+.static_page .bottom a:hover, .news_view_page .bottom a:hover, .product_view_page .bottom a:hover {text-decoration: none;}
 /*----------STATIC PAGE END----------*/
 
 
 /*----------NEWS LIST PAGE START----------*/
+.news_list_page {
+  border: solid 1px #bab293;
+  margin-bottom: 50px;
+}
+
 .news_list_page .top, .product_list_page .top {
-  background: url(images/news_box_top.png) no-repeat;
   height: 54px;  line-height: 47px;
   padding-left: 15px;
+  background: #c06d32;
+  display: flex;
+  align-items: center;
 }
 
 .news_list_page .top h2, .product_list_page .top h2 {
-  color: #FCEDCF;
-  font-size: 16px;  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .news_list_page .repeat {padding: 15px 0;}
@@ -1098,7 +1103,6 @@ p {line-height: 18px;}
 .news_list_page .more .repeat {padding: 0;}
 
 .news_list_page .item {
-  background: url(images/news_list_divide.gif) no-repeat center bottom;
   padding: 0 15px 15px 15px;  
 }
 
