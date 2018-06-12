@@ -13,13 +13,15 @@
   {/if}
 
 	<link href="style.css?v=1" type="text/css" rel="stylesheet" />
+
 	{if $metaCanonical!=''}
   <link rel="canonical" href="{$metaCanonical}.html" />
   {/if}
 
   <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
-    <link href="css/jquery.jcarousel.css" type="text/css" rel="stylesheet" />
-      <link href="css/jquery.fancybox-1.3.1.css" type="text/css" rel="stylesheet" />
+  <link href="css/jquery.jcarousel.css" type="text/css" rel="stylesheet" />
+  <link href="css/jquery.fancybox-1.3.1.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
   <script src="js/jquery.js?v=1" type="text/javascript"></script>
   <script src="js/script.js?v=1" type="text/javascript"></script>
@@ -145,14 +147,86 @@
         <!--left menu starts here-->
         <div class="left_menu">
           <ul>
-            <li><a href="{$searchFilename}" title="Keresés">Keresés</a></li>
-            <li><a href="{$cartFilename}" title="Kosár tartalma">Kosár tartalma</a></li>
-            <li><a href="{$registerFilename}" title="Regisztráció">Regisztráció</a></li>
-            <li><a href="{$pgDeliveryFilename}" title="Szállítás">Szállítás</a></li>
-            <li><a href="{$articleListFilename}" title="Tudnivalók">Tudnivalók</a></li>
-            <li><a href="{$contactFilename}" title="Kapcsolat">Kapcsolat</a></li>
-            
+            <li>
+              <a  title="Keresés" class="toggle_item"><span>Keresés</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="detailed_search_box toggle_content">
+                <form name="advanced_search2" action="{$searchResultsFilename}" method="post">
+                  <div>
+                    <input type="text" placeholder="Keresett szöveg (terméknév)" name="searchpattern" id="kszoveg"/>
+                  </div>
+                  <div>
+                    <select name="manufacturer" id="gyarto">
+                      {html_options options=$manufacturersAvaiable}
+                    </select>
+                  </div>
+
+                  <div>
+                    <select name="categories[]" id="termek">
+                      {html_options options=$categoriesAvailable}
+                    </select>
+                  </div>
+                  <div class="input-group">
+                      <input type="text" value="Ár min" name="searchpattern" id="kszoveg" placeholder="Ár min."/>
+                      <input type="text" value="Ár max" name="searchpattern" id="kszoveg" placeholder="Ár max"/>
+                  </div>
+                  <div class="submit">
+                    <input type="hidden" name="dosearch" value="Keresés" />
+                    <input type="submit" value="KERESÉS" />
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li>
+              <a title="Szauna termékek" class="toggle_item"><span>Szauna termékek</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="category_box toggle_content">
+                {$categoryTree}
+              </div>
+            </li>
+            <li><a href="#" title="Újdonságok" class="left_menu_item">Újdonságok</a></li>
+            <li><a href="{$cartFilename}" title="Kosár tartalma" class="left_menu_item">Kosár tartalma</a></li>
+            <li>
+              <a title="Bejelentkezés" class="toggle_item"><span>Bejelentkezés</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="login_box toggle_content">
+                {if $loguser===false}
+                   <form name="login" action="{$self}" method="post">
+                      <div>
+                        <p class="inputFocus">
+                          <input type="text" name="login_email" />
+                          <span>E-mail cím</span>
+                        </p>
+                      </div>
+
+                      <div>
+                        <p class="inputFocus">
+                          <input type="password" name="login_password"/>
+                          <span>Jelszó</span>
+                        </p>
+                      </div>
+                      <input type="hidden" name="dologin" value="2" />
+                      <div class="submit">
+                        <a href="{$forgotFilename}" title="">Elfelejtett jelszó</a>
+                        <input type="submit" value="BELÉPÉS" />
+                      </div>
+                    </form>
+                {else}
+  	            <div align="center" class="nameContainer">Köszöntjük, {$userbelepett}!</div>
+
+                <a href="{$modifyFilename}" class="orangeLink">Adataim</a>
+                    <a href="{$previousordersFilename}" class="orangeLink">Rendeléseim</a>
+                <a href="{$logoutFilename}" class="greyLink">Kilépés</a>
+                {/if}
+              </div>
+            </li>
+            <li><a href="{$registerFilename}" title="Regisztráció" class="left_menu_item">Regisztráció</a></li>
+            <li><a href="{$pgDeliveryFilename}" title="Szállítás" class="left_menu_item">Szállítás</a></li>
+            <li><a href="{$articleListFilename}" title="Tudnivalók" class="left_menu_item">Tudnivalók</a></li>
+            <li><a href="#" title="Hírlevél feliratkozás" class="left_menu_item">Hírlevél feliratkozás</a></li>
+            <li><a href="{$contactFilename}" title="Kapcsolat" class="left_menu_item">Kapcsolat</a></li>
+            <li><a href="#" title="Elérhetőségek" class="left_menu_item">Elérhetőségek</a></li>
           </ul>
+          <div class="contact_box">
+            {$elerszoveg}
+          </div>
         </div>
         <!--left menu ends here-->
         
@@ -168,40 +242,7 @@
         <!--category box ends here-->
                 
         
-        <!--login box starts here-->
-        <!--<div class="login_box">
-          <h2 class="boxtitle">Bejelentkezés</h2>
-          {if $loguser===false}
-         <form name="login" action="{$self}" method="post">
-            <div>
-              <p class="inputFocus">
-                <input type="text" name="login_email" />
-                <span>E-mail cím</span>
-              </p>
-            </div>
-            
-            <div>
-              <p class="inputFocus">
-                <input type="password" name="login_password"/>
-                <span>Jelszó</span>
-              </p>
-            </div>
-            <input type="hidden" name="dologin" value="2" />
-            <div class="submit">
-              <a href="{$forgotFilename}" title="">Elfelejtett jelszó</a>
-              <input type="submit" value="BELÉPÉS" />
-            </div>                    
-          </form>
 
-        {else}
-  	    <div align="center" class="nameContainer">Köszöntjük, {$userbelepett}!</div>
-        
-        <a href="{$modifyFilename}" class="orangeLink">Adataim</a>
-		    <a href="{$previousordersFilename}" class="orangeLink">Rendeléseim</a>
-        <a href="{$logoutFilename}" class="greyLink">Kilépés</a>
-         {/if}
-        </div>-->
-        <!--login box ends here-->
         
         
         <!--detailed search box starts here-->

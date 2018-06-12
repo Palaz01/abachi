@@ -423,7 +423,7 @@ p {line-height: 18px;}
 
 
 .boxtitle, .left_menu a {
-  font-family: Century Gothic, Times New Roman;  font-size: 19px;
+  font-size: 19px;
   padding-left: 20px;  
 }
 
@@ -432,9 +432,23 @@ p {line-height: 18px;}
   width: 231px;  /*height: 143px;*/
   background: #c06d32;
 }
+
+.left_menu .toggle_item,
+.left_menu .left_menu_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle_item_open {
+  background: #303030;
+}
+
+.toggle_content {
+  border-top: 1px solid #c89a70;
+}
+
 .left_menu span {
   display: block;
-  height: 27px;
 }
 
 .left_menu li {
@@ -451,21 +465,18 @@ p {line-height: 18px;}
   font-size: 14px;
   text-transform: uppercase;
   color: #edd9d0;
-  padding: 17px 20px 20px 20px;
+  padding: 17px 20px 17px 20px;
 }
-.left_menu a:hover {color: white;}
-
-
-.login_box, .detailed_search_box  {
-  width: 216px;
-  margin-left: 8px;
+.left_menu a:hover {
+  color: white;
+  cursor: pointer;
 }
+
 
 .login_box {
-  min-height: 160px;
-  background: url(images/login_box.gif) no-repeat;
-  padding-top: 15px;
-  position: relative;
+  display: flex;
+  padding: 15px 15px;
+  background: #303030;
 }
 
 .login_box h2, .detailed_search_box h2 {
@@ -473,9 +484,16 @@ p {line-height: 18px;}
   margin-bottom: 35px;
 }
 
-.login_box form, .detailed_search_box form {padding-left: 13px;}
 
-.login_box div, .detailed_search_box div {height: 28px;}
+
+.detailed_search_box form {
+  padding-left: 13px;
+}
+
+.login_box div, .detailed_search_box div {
+  height: 40px;
+  margin-bottom: 10px;
+}
 
 .inputFocus {
   height: 20px;
@@ -490,10 +508,20 @@ p {line-height: 18px;}
   width: 177px;  height: 20px;
 }
 
-.login_box input, .detailed_search_box input {
-  width: 177px;  height: 20px;  line-height: 20px;
-  background-color: white;
-  padding: 0 5px;
+.detailed_search_box input {
+  padding: 0px 25px;
+  height: 40px;
+  width: 100%;
+}
+
+.login_box input {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+}
+
+.login_box form {
+  width: 100%;
 }
 
 .login_box .submit, .detailed_search_box .submit {height: 37px;}
@@ -501,53 +529,94 @@ p {line-height: 18px;}
 .login_box a, .login_box .submit input {float: left;}
 
 .login_box a {
-  color: #5A3512;
+  color: #fff;
   font-size: 12px;
-  margin-right: 5px;  margin-top: 5px;
+  text-transform: none;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .login_box .submit input, .detailed_search_box .submit input {
-  width: 89px;  height: 34px;
-  padding: 0;
-  font-size: 14px;  font-family: Trajan Pro;
-  color: white;
-  background: url(images/login_submit.png) no-repeat;
+  width: 100%;
 }
 
-.login_box .submit input:hover, .detailed_search_box .submit input:hover {background: url(images/login_submit_hover.png) no-repeat;}
+.login_box .submit input {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #303030;
+}
+
+.login_box .submit input:hover {
+  background: #fff;
+  color: #303030;
+}
+
 
 
 .detailed_search_box {
-  height: 180px;
   padding-top: 10px;
-  background: url(images/detailed_search_box.gif) no-repeat;
+  padding-bottom: 10px;
+  background: #303030;
 }
 
-.detailed_search_box h2 {margin-bottom: 30px;}
+.detailed_search_box input {
+  margin-bottom: 40px;
+}
 
-.detailed_search_box select, .detailed_search_box input {border: 1px solid #6d4018;}
+.detailed_search_box form {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-.detailed_search_box select {width: 189px;}
+.detailed_search_box form div {
+  display: flex;
+}
+
+.detailed_search_box .input-group{
+  display: flex;
+  width: 100%;
+  }
+
+.detailed_search_box .input-group input {
+  width: 50%;
+}
+
+
+.detailed_search_box h2 {
+  margin-bottom: 30px;
+}
+
+.detailed_search_box select, .detailed_search_box input {
+  border: 1px solid #6d4018;
+}
+
+.detailed_search_box select {
+  padding: 0 25px;
+  height: 40px;
+  width: 100%;
+}
 
 .detailed_search_box .submit input {
-  margin-left: 98px;
-  border: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #303030;
 }
 
+.detailed_search_box .submit input:hover {
+  background: #fff;
+  color: #303030;
+}
 
 .category_box {
   /*margin-bottom: 10px;*/
-  width: 231px;  
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #303030;
 }
 
-.category_box h2 {
-  color: #432507;
-  font-size: 19px;
-  height: 39px; 
-  padding-top: 15px; 
-}
+.category_box ul {
 
-.category_box ul {margin: 0 7px 0 8px;}
+}
 
 .category_box ul ul {
   display: none;
@@ -555,8 +624,14 @@ p {line-height: 18px;}
 }
 
 .category_box ul a {
-  background-color: #393939;
   padding: 5px 15px;
+  text-transform: none;
+  color: #edd9d0;
+}
+
+.category_box ul a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .category_box ul ul a {
@@ -578,6 +653,7 @@ p {line-height: 18px;}
   /*background: url(images/celkereszt.png) no-repeat 0 4px;*/
   /*padding-left: 10px;  padding-right: 10px;*/
   line-height: 18px;
+  border: none;
   /*margin-bottom: 10px;*/ 
 }
 
@@ -607,23 +683,30 @@ p {line-height: 18px;}
 .newsletter_link:hover {color: #432507;}
 
 .contact_box {
-  background: url(images/contactBox.gif) no-repeat 9px top;
-  height: 212px;
-  padding-left: 30px; padding-right: 20px;
+  background: #303030;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.contact_box hr {
+  display: none;
 }
 
 .contact_box h2 {
   color: white;
-  font-family: Century Gothic, Times New Roman;  font-size: 19px;  font-weight: bold;
+  font-size: 19px;
+  font-weight: bold;
   line-height: 29px;
   padding: 0;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
+  display: none;
 }
 
 .contact_box .first {
-  color: #432507;
+  color: #b9632d;
   display: block;
-  font-size: 17px;  font-family: Century Gothic;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 
@@ -633,11 +716,20 @@ p {line-height: 18px;}
   display: block;  
 }
 
-.contact_box strong {color: #682600;}
+.contact_box strong {
+  color: #b9632d;
+}
 
-.contact_box p {color: #2c2c2c;}
+.contact_box p, .contact_box h3, .contact_box h4 {
+  color: #fff;
+}
 
-.contact_box a {color: #3a5100;}
+.contact_box a {
+  color: #fff;
+  text-transform: none;
+  padding: 0;
+  font-size: 12px;
+}
 
 .contact_box .open {
   font-size: 14px;
@@ -769,9 +861,8 @@ p {line-height: 18px;}
   border: 1px solid #c06d32;
   font-size: 14px;
   text-transform: uppercase;
-  padding: 13px 0px;
+  padding: 13px 30px;
   text-decoration: none;
-  width: 130px;
   display: flex;
   justify-content: center;
   white-space: nowrap;

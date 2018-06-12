@@ -3,11 +3,11 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="657b8c18-22fb-4e33-976c-5801946bbced" name="kisSzerver" url="http://abachi.local">
-        <fileTransfer host="192.168.0.250" port="22" rootFolder="/var/www/abachiszauna" accessType="SFTP">
+        <fileTransfer host="37.191.63.17" port="999" rootFolder="/var/www/abachiszauna" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="22" />
+          <option name="port" value="999" />
         </fileTransfer>
       </webServer>
     </option>

@@ -174,5 +174,14 @@ $(document).ready(function(){
     
     return false;
   });
+
+  $('.toggle_content').hide();
+
+  $('.toggle_item').click(function(){
+    $(this).siblings().slideToggle();
+    $(this).children('.fa').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
+    $(this).toggleClass('toggle_item_open');
+  });
    
 });
+
