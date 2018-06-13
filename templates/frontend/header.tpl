@@ -191,15 +191,13 @@
                    <form name="login" action="{$self}" method="post">
                       <div>
                         <p class="inputFocus">
-                          <input type="text" name="login_email" />
-                          <span>E-mail cím</span>
+                          <input type="text" name="login_email" placeholder="E-mail cím"/>
                         </p>
                       </div>
 
                       <div>
                         <p class="inputFocus">
-                          <input type="password" name="login_password"/>
-                          <span>Jelszó</span>
+                          <input type="password" name="login_password" placeholder="Jelszó"/>
                         </p>
                       </div>
                       <input type="hidden" name="dologin" value="2" />
