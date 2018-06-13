@@ -3,7 +3,6 @@
 <div class="static_page">
           <div class="top">
             <h2>Kapcsolatfelvétel</h2>
-            <div class="vodor"></div>
           </div>
           
           {include file='errors.tpl'}  

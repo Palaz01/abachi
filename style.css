@@ -4,7 +4,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, input, form, label, textarea, im
 li {list-style: none;}
 
 a {
-  text-decoration: underline;
   outline: none;  
   color: #e88030;
 }
@@ -29,7 +28,6 @@ input, textarea, select {
   font-size: 13px;
   color: #686767;  
 }
-
 .submit input, input.submit {cursor: pointer;}
 
 body {
@@ -63,6 +61,26 @@ h3 {font-size: 14px;  font-weight: bold;}
 h4 {font-size: 12px;  font-weight: normal;}
 
 p {line-height: 18px;}
+
+.top {
+  height: 47px;
+  line-height: 47px;
+  padding-left: 15px;
+  background: #c06d32;
+  display: flex;
+  align-items: center;
+}
+
+.top h2 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bottom {
+  display: none;
+}
 /*----------GENERAL END----------*/
 
 
@@ -1005,41 +1023,31 @@ p {line-height: 18px;}
 
 
 /*----------STATIC PAGE START----------*/
-.static_page, .news_view_page, .registration_page, .product_view_page, .cart_page, .detailed_search_page {
-  width: 708px;
-  margin-top: 45px; margin-bottom: 15px;
-  position: relative;
+
+
+.static_page {
+  background: #fff;
+  margin-bottom: 40px;
+  border: solid 1px #bab293;
 }
 
+.static_page .bottom {
+  display: none;
+}
+
+
 .vodor {
-  background: url(images/vodor.png) no-repeat;
   position: absolute;
   right: 5px;  bottom: 5px;
   width: 72px;  height: 86px;
 }
 
 .ful {
-  background: url(images/ful.png) no-repeat;
   position: absolute;
   right: 0;  bottom: 0;
   width: 12px;  height: 40px;
 }
 
-.static_page .top h2, .static_page .repeat, .static_page .bottom, .news_view_page .top h2, .news_view_page .bottom, .product_view_page .top h2, .product_view_page .bottom, .cart_page .top h2, .detailed_search_page .top h2 {padding-left: 15px;}
-
-.static_page .top, .product_view_page .top, .cart_page .top, .detailed_search_page .top, .registration_page .top, .news_view_page .top {
-  background: url(images/staticPageHeaderTop.png) no-repeat left top;
-  position: relative;  
-}
-
-.static_page .top h2, .product_view_page .top h2, .cart_page .top h2, .detailed_search_page .top h2, .registration_page .top h2, .news_view_page .top h2 {
-  background: url(images/staticPageHeaderBottom.png) no-repeat left bottom;
-  font-size: 16px;  font-weight: bold;
-  color: #fcedcf;  
-  padding-top: 15px;  padding-bottom: 25px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
 
 .static_page .repeat, .news_view_page .repeat, .registration_page .form, .product_list_page .container, .product_view_page .container, .cart_page .container, .detailed_search_page .repeat {
   padding: 20px 0 20px 15px;  
@@ -1082,21 +1090,7 @@ p {line-height: 18px;}
 .news_list_page {
   border: solid 1px #bab293;
   margin-bottom: 50px;
-}
-
-.news_list_page .top, .product_list_page .top {
-  height: 54px;  line-height: 47px;
-  padding-left: 15px;
-  background: #c06d32;
-  display: flex;
-  align-items: center;
-}
-
-.news_list_page .top h2, .product_list_page .top h2 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
+  background: #fff;
 }
 
 .news_list_page .repeat {padding: 15px 0;}
@@ -1105,6 +1099,15 @@ p {line-height: 18px;}
 
 .news_list_page .item {
   padding: 0 15px 15px 15px;  
+}
+
+.news_list_page .item h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.news_list_page .item p {
+  margin-bottom: 15px;
 }
 
 .news_list_page .last {
@@ -1484,6 +1487,8 @@ p {line-height: 18px;}
   display: flex;
   flex-direction: column;
   padding: 10px 10px 15px 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid #bab293;;
 }
 
 .product_item .product a,
@@ -1612,7 +1617,25 @@ p {line-height: 18px;}
 
 
 /*----------PRODUCT VIEW PAGE START----------*/
-.product_view_page {margin-bottom: 15px;}
+.product_view_page {
+  margin-bottom: 15px;
+  background: #fff;
+  border: solid 1px #bab293;
+}
+
+.product_view_page .product {
+  display: flex;
+}
+
+.product_info_left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.product_view_page .text_container {
+  width: 50%;
+}
 
 .product_view_page .productName {
   color: #ba642d;
@@ -1629,8 +1652,6 @@ p {line-height: 18px;}
 
 .product_view_page .product {padding: 0 15px;}
 
-.product_view_page .product img.first, .product_view_page .product .text_container {float: left;}
-
 .product_view_page .product img.first {margin-right: 10px;}
 
 .product_view_page .product .text_container {
@@ -1641,7 +1662,12 @@ p {line-height: 18px;}
 .product_view_page .price_container {
   padding-top: 15px;
   margin-top: 15px;
-  background: url(images/news_list_divide.gif) no-repeat;
+  display: flex;
+}
+
+.product_view_page .price_container div {
+  display: flex;
+  flex-direction: column;
 }
 
 .product_view_page .price_container p, .product_view_page .price_container .submit {float: left;}

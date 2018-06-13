@@ -2,7 +2,6 @@
 <div class="static_page" style="margin-bottom: 0;">
           <div class="top">
             <h2>Hírlevél feliratkozás</h2>
-            <div class="vodor"></div>
           </div>
 <div class="repeat">
   <div class="fck">

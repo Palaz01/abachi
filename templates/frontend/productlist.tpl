@@ -27,24 +27,26 @@
                     <div class="image">
                         <a href="{$product.filename}.html"><img src="{#pt#}{$product.image}&w=119" width="119" border="0" alt="{$product.imgalt}" title="{$product.imgtitle}"></a>
                     </div>
-                    <div class="product">
-                        <a href="{$product.filename}.html">{$product.title}</a>
-                    </div>
-                    <div class="manufacturer">
-                        <a href="{$product.manufacturerurl}.html">{$product.manufacturer}</a>
-                    </div>
+                    <div>
+                        <div class="product">
+                            <a href="{$product.filename}.html">{$product.title}</a>
+                        </div>
+                        <div class="manufacturer">
+                            <a href="{$product.manufacturerurl}.html">{$product.manufacturer}</a>
+                        </div>
 
-                    <div class="price">
-                        {if $product.price!=0||$product.priced!=0}
-                        {if $product.priced != 0}
-                            {$product.price|commify:-1:',':'.'} helyett {$product.priced|commify:-1:',':'.'} Ft
-                        {else}
-                            {$product.price|commify:-1:',':'.'} Ft
-                        {/if}
-                        {/if}
+                        <div class="price">
+                            {if $product.price!=0||$product.priced!=0}
+                            {if $product.priced != 0}
+                                {$product.price|commify:-1:',':'.'} helyett {$product.priced|commify:-1:',':'.'} Ft
+                            {else}
+                                {$product.price|commify:-1:',':'.'} Ft
+                            {/if}
+                            {/if}
+                        </div>
                     </div>
                     <div class="product_item_buttons">
-                        <a type="button" class="details">Részletek</a>
+                        <a href="{$product.filename}.html" type="button" class="details">Részletek</a>
                         {if $product.price==0}
                         <div class="buy">
                             <input class="submit" type="button" value="AJÁNLAT" onclick="javascript:document.location='{$contactFilename}';" />
