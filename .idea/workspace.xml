@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61be15cf-31e8-4811-a85b-4f49cb48bc9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="911" column="2" selection-start-line="911" selection-start-column="2" selection-end-line="911" selection-end-column="2" />
+            <state relative-caret-position="206">
+              <caret line="984" column="16" selection-start-line="984" selection-start-column="16" selection-end-line="984" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -66,10 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>product_view_page .pro</find>
-      <find>price_cont</find>
-      <find>big_pri</find>
-      <find>big_price span</find>
       <find>price_container</find>
       <find>price_container .sub</find>
       <find>productName</find>
@@ -96,6 +91,10 @@
       <find>new_stuff_box</find>
       <find>new_stuff_box .pro</find>
       <find>details_link</find>
+      <find>.more</find>
+      <find>min-width</find>
+      <find>további</find>
+      <find>.news_list_page .more</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/css/css</dir>
@@ -218,12 +217,12 @@
       <workItem from="1528784015868" duration="13625000" />
       <workItem from="1528810049133" duration="6615000" />
       <workItem from="1528877267538" duration="17542000" />
-      <workItem from="1528956499115" duration="16136000" />
+      <workItem from="1528956499115" duration="17476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86115000" />
+    <option name="totallyTimeSpent" value="87455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
@@ -601,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="911" column="2" selection-start-line="911" selection-start-column="2" selection-end-line="911" selection-end-column="2" />
+        <state relative-caret-position="206">
+          <caret line="984" column="16" selection-start-line="984" selection-start-column="16" selection-end-line="984" selection-end-column="16" />
         </state>
       </provider>
     </entry>
