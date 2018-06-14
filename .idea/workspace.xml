@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/style.css" line="201" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/style.css" line="205" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61be15cf-31e8-4811-a85b-4f49cb48bc9e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/comment1.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/comment1.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/product.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/product.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +20,17 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="563" column="28" selection-start-line="563" selection-start-column="28" selection-end-line="563" selection-end-column="28" />
+            <state relative-caret-position="311">
+              <caret line="911" column="2" selection-start-line="911" selection-start-column="2" selection-end-line="911" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webshop-subpage.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="24" column="150" selection-start-line="20" selection-start-column="17" selection-end-line="24" selection-end-column="150" />
             </state>
           </provider>
         </entry>
@@ -59,9 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.top</find>
-      <find>product_lis</find>
-      <find>.top h2</find>
       <find>product_view_page .pro</find>
       <find>price_cont</find>
       <find>big_pri</find>
@@ -89,6 +93,9 @@
       <find>kapcsolodo_termek .text_containe</find>
       <find>kapcsolodo</find>
       <find>product_view_page</find>
+      <find>new_stuff_box</find>
+      <find>new_stuff_box .pro</find>
+      <find>details_link</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/css/css</dir>
@@ -118,6 +125,7 @@
         <option value="$PROJECT_DIR$/templates/frontend/productlist.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/comment1.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/product.tpl" />
+        <option value="$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl" />
         <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
@@ -210,12 +218,12 @@
       <workItem from="1528784015868" duration="13625000" />
       <workItem from="1528810049133" duration="6615000" />
       <workItem from="1528877267538" duration="17542000" />
-      <workItem from="1528956499115" duration="15188000" />
+      <workItem from="1528956499115" duration="16136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85167000" />
+    <option name="totallyTimeSpent" value="86115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
@@ -251,13 +259,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/frontend/articlelist.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="112" selection-start-line="22" selection-start-column="112" selection-end-line="22" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/szolgaltataslist.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -591,10 +592,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="24" column="150" selection-start-line="20" selection-start-column="17" selection-end-line="24" selection-end-column="150" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="563" column="28" selection-start-line="563" selection-start-column="28" selection-end-line="563" selection-end-column="28" />
+        <state relative-caret-position="311">
+          <caret line="911" column="2" selection-start-line="911" selection-start-column="2" selection-end-line="911" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,6 @@
 
  <div class="new_stuff_box">
           <h2 class="title">SZAUNA AKCIÓ, ÚJDONSÁGOK</h2>
-          
           <div class="container">
           
           
@@ -18,19 +17,21 @@
                 <img src="{#pt#}{$row.image}&amp;w=123&amp;h=128&amp;far=1" width="123" height="128" alt="{$row.imgalt}" title="{$row.imgtitle}" />
                 
                 <div class="text_container">
-                  <h2><a href="{$row.filename}.html" title="">{$row.title}</a></h2>
-                  
-                  <p>{$row.description}</p>
-                  
-                  <p class="price"><span><span>{if $row.finalprice!='0'}Ára: <b>{$row.finalprice|commify:-1:',':'.'} Ft</b>{/if}</span></span></p>
-                  <br class="clear" />
-                  
-                  <a href="{$row.filename}.html" title="" class="details_link">RÉSZLETEK</a>
-                  {if $row.finalprice==0}
-                  <a href="{$contactFilename}" title="" class="cart_link">AJÁNLAT</a>
-                  {else}
-                  {if $row.instock}<a href="#" title="" onclick="javascript:document.location='{$row.addToCartFilename}.html';" class="cart_link">KOSÁRBA</a>{/if}
-                  {/if}
+                  <div>
+                      <h2><a href="{$row.filename}.html" title="">{$row.title}</a></h2>
+
+                      <p>{$row.description}</p>
+
+                      <p class="price"><span><span>{if $row.finalprice!='0'}Ára: <b>{$row.finalprice|commify:-1:',':'.'} Ft</b>{/if}</span></span></p>
+                  </div>
+                  <div class="flex">
+                      <a href="{$row.filename}.html" title="" class="details_link">RÉSZLETEK</a>
+                      {if $row.finalprice==0}
+                      <a href="{$contactFilename}" title="" class="cart_link">AJÁNLAT</a>
+                      {else}
+                      {if $row.instock}<a href="#" title="" onclick="javascript:document.location='{$row.addToCartFilename}.html';" class="cart_link">KOSÁRBA</a>{/if}
+                      {/if}
+                  </div>
                 </div>
               </div>
               
