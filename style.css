@@ -1,5 +1,5 @@
 /*----------GENERAL START----------*/
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, input, form, label, textarea, img {margin: 0; padding: 0; border: 0;}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, input, form, label, textarea, img {margin: 0; padding: 0;}
  
 li {list-style: none;}
 
@@ -24,7 +24,11 @@ a:hover {text-decoration: none;}
 .float_left {float: left !important;}
 .float_right {float: right !important;}
 
-input, textarea, select {
+.flex {
+    display: flex;
+}
+
+select {
   font-size: 13px;
   color: #686767;  
 }
@@ -557,6 +561,7 @@ p {line-height: 18px;}
 
 .login_box .submit input, .detailed_search_box .submit input {
   width: 100%;
+  padding-left: 0 !important;
 }
 
 .login_box .submit input {
@@ -850,7 +855,7 @@ p {line-height: 18px;}
 }
 
 
-.product_view_page .price_container .submit input, .cart_page div.submit .pay, .cart_page .orders a {
+.cart_page div.submit .pay, .cart_page .orders a {
   font-family: Century Gothic, Times New Roman;  font-size: 12px;
   color: white;
   display: block;
@@ -909,17 +914,6 @@ p {line-height: 18px;}
   border-color: #505050;
 }
 
-
-.product_view_page .price_container .submit input, .cart_page div.submit .pay {
-  width: 76px;
-  background: url(images/green_link.png) no-repeat;
-}
-
-.cart_page div.submit .pay:hover {background: url(images/green_link_hover.png) no-repeat;}
-
-
-
-
 .news_box {
   border: solid 1px #bab293;
   background: #fff;
@@ -967,7 +961,7 @@ p {line-height: 18px;}
 
 .news_box .item img, .news_box .item .text_container, .news_list_page .item img, .news_list_page .item .text_container, .kapcsolodo_termek img, .kapcsolodo_termek .text_container {float: left;}
 
-.news_box .item .text_container, .news_list_page .item .text_container, .kapcsolodo_termek .text_container {width: 515px;}
+.news_box .item .text_container, .news_list_page .item .text_container  {width: 515px;}
 
 .news_box .item .text_container p, .news_list_page .item .text_container p {margin-bottom: 10px;}
 
@@ -1181,8 +1175,6 @@ p {line-height: 18px;}
   margin-top: 2px;
 }
 
-.news_view_page img, .product_view_page .product img {border: 3px solid #bab293;}
-
 .news_view_page .first {
   float: left;
   margin-right: 15px;
@@ -1255,9 +1247,6 @@ p {line-height: 18px;}
 
 
 /*----------COMMENT NOW START----------*/
-.form div {height: 30px;}
-
-.form .textarea {height: 76px;}
 
 .form .check img {border: 0;}
 
@@ -1278,7 +1267,7 @@ p {line-height: 18px;}
   border: 1px solid #bab293;  
 }
 
-.form input, .registration_box input {
+.registration_box input {
   width: 220px; height: 20px; line-height: 20px;
   padding: 0 5px;  
   margin-right: 10px;
@@ -1317,15 +1306,14 @@ p {line-height: 18px;}
   width: 160px;
 }
 
-.static_page .form input, .registration_page input, .detailed_search_page input, .write_your_opinion input {
+.static_page .form input, .registration_page input, .detailed_search_page input {
   background: url(images/input.png) no-repeat;
   border: 0;
   margin: 0;
   width: 338px;  height: 22px;  line-height: 22px;
 }
 
-.static_page .form .submit input, .write_your_opinion .check .submit {
-  background: url(images/submit.png) no-repeat;
+.static_page .form .submit input {
   float: right;
   font-family: Century Gothic, Times New Roman;
   padding: 0;
@@ -1334,10 +1322,10 @@ p {line-height: 18px;}
 
 .static_page .form .textarea {height: 155px;}
 
-.static_page .form textarea, .write_your_opinion textarea {
+.static_page .form textarea {
   background: url(images/textarea.png) no-repeat;
   border: 0;
-  width: 338px;  height: 145px;  
+  width: 338px;  height: 145px;
 }
 
 .static_page .form .check input {
@@ -1618,7 +1606,7 @@ p {line-height: 18px;}
 
 /*----------PRODUCT VIEW PAGE START----------*/
 .product_view_page {
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   background: #fff;
   border: solid 1px #bab293;
 }
@@ -1638,14 +1626,19 @@ p {line-height: 18px;}
 }
 
 .product_view_page .productName {
-  color: #ba642d;
-  font-size: 14px;  font-weight: bold;
-  margin-bottom: 10px;
+  color: #b9632d;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-.product_view_page .manufacturer a {
-  color: #b15a27;
-  font-size: 13px;  font-weight: bold;
+.product_view_page .manufacturer,
+.product_view_page .manufacturer a{
+    font-size: 13px;
+    font-weight: bold;
+    color: #5a3512;
+    margin-bottom: 15px;
+    text-decoration: none;
 }
 
 .product_view_page .container {padding: 10px 0 0 0;}
@@ -1663,6 +1656,40 @@ p {line-height: 18px;}
   padding-top: 15px;
   margin-top: 15px;
   display: flex;
+  justify-content: space-between;
+}
+
+.text_container .price_container input,
+.text_container input{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #383838;
+}
+
+.text_container .price_container input {
+    background: #fff;
+    color: #383838;
+}
+
+.text_container input {
+    background: #383838;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.text_container input:hover {
+    background: #505050;
+    color: #fff;
+    cursor: pointer;
+}
+
+.text_container .price_container input:hover {
+    background: #383838;
+    color: #fff;
 }
 
 .product_view_page .price_container div {
@@ -1670,34 +1697,13 @@ p {line-height: 18px;}
   flex-direction: column;
 }
 
-.product_view_page .price_container p, .product_view_page .price_container .submit {float: left;}
-
-.product_view_page .price_container .submit {
-  width: 76px;
-  margin-top: 5px;  
-}
-
-.product_view_page .price_container p {color: #ba652e;}
-
 .product_view_page .big_price {
-  font-size: 18px !important;  font-weight: bold;
-  margin-right: 10px;
-  color: #f06f2e;
-  background: url(images/big_price_repeat.gif) repeat-x;  
-}
-
-.product_view_page .big_price b {color: #5a3512;}
-
-.product_view_page .big_price span {
-  padding-left: 10px;
-  display: block;
-  height: 38px; line-height: 38px;
-  background: url(images/big_price_left.gif) no-repeat left top;  
-}
-
-.product_view_page .big_price span span {
-  padding: 0 10px 0 0;
-  background: url(images/big_price_right.gif) no-repeat right top;  
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #5a3512;
+    margin-bottom: 10px;
 }
 
 .product_view_page .raktar {
@@ -1712,14 +1718,10 @@ p {line-height: 18px;}
   font-weight: normal;
 }
 
-.opinions
-{
-background: url(images/news_list_divide.gif) no-repeat center top;
-}
 
-.opinions, .write_your_opinion {margin-top: 10px;}
 
-.opinions h2, .write_your_opinion h2, .kapcsolodo_termek h2 {
+
+.opinions h2, .write_your_opinion h2 {
   color: #ba642d;
   font-size: 14px;  font-weight: normal;
   margin-bottom: 10px;  
@@ -1776,11 +1778,58 @@ background: url(images/news_list_divide.gif) no-repeat center top;
   padding-left: 10px;  
 }
 
-
 .write_your_opinion {
+    padding: 0 95px;
+}
+
+.write_your_opinion h2 {
+    text-align: center;
+    color: #ba642d;
+    font-size: 20px;
+    margin-bottom: 27px;
+}
+
+
+.write_your_opinion form{
   padding-bottom: 10px;
   margin-bottom: 10px;
-  background: url(images/news_list_divide.gif) no-repeat center bottom;
+  display: flex;
+}
+
+.opinion_col {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.write_your_opinion .rating {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.write_your_opinion .rating span {
+    font-size: 13px;
+    color: #5a3512;
+    margin-right: 25px;
+}
+
+.write_your_opinion .rating label {
+    font-size: 13px;
+    color: #5a3512;
+    font-weight: bold;
+    padding: 0;
+}
+
+.please_check {
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: #5a3512;
+    font-weight: bold;
+}
+
+
+.write_your_opinion .check .flex {
+    margin-bottom: 25px;
 }
 
 .write_your_opinion label {
@@ -1791,22 +1840,65 @@ background: url(images/news_list_divide.gif) no-repeat center top;
   width: 80px;
 }
 
-.write_your_opinion .textarea {height: 170px;}
+.write_your_opinion .submit {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 5px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #383838;
+    background: #383838;
+    color: #fff;
+    line-height: normal;
+    height: 40px;
+    width: 100%;
+}
 
-.write_your_opinion .textarea textarea {width: 338px; height: 145px;}
+.write_your_opinion .submit:hover {
+    background: #505050;
+}
+
+.write_your_opinion input[type="text"],
+.write_your_opinion textarea {
+    border: solid 1px #bab293;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.write_your_opinion input[type="text"] {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.write_your_opinion textarea {
+    height: 200px;
+    padding-top: 15px;
+}
+
+.write_your_opinion .accept {
+    margin-bottom: 15px !important;
+}
+
+.write_your_opinion .accept input {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #bab293;
+    margin-right: 10px;
+}
+
+.write_your_opinion .accept p {
+    font-size: 13px;
+    color: #5a3512;
+}
+
 
 .write_your_opinion .rating {width: 400px;}
 
 .write_your_opinion .rating, .write_your_opinion .rating span {float: left;}
 
 .write_your_opinion .rating .first {color: #393939;}
-
-.write_your_opinion .rating span {
-  color: #b25b27;
-  font-size: 12px;
-  line-height: 20px;
-  margin-right: 10px;
-}
 
 .write_your_opinion .rating input {
   background: none;
@@ -1821,26 +1913,36 @@ background: url(images/news_list_divide.gif) no-repeat center top;
 
 .write_your_opinion .submit {padding-right: 15px;}
 
-.write_your_opinion .check {padding-left: 158px;}
+.write_your_opinion .check {
 
-.write_your_opinion .check input {
-  background: url(images/inputSmall.png) no-repeat;
-  margin-right: 15px;  margin-top: 5px;
-  width: 165px;
 }
+
+
 
 .write_your_opinion .check img {margin-right: 10px;}
 
-.write_your_opinion .check .submit {
-  color: white;
-  float: left;
-  margin-top: 2px;
+
+
+
+.kapcsolodo_termek.new_stuff_box {
+  padding-bottom: 10px;
+  margin-bottom: 40px !important;
 }
 
+.kapcsolodo_termek .details_link {
+    margin-right: 10px;
+}
 
-.kapcsolodo_termek {
-  margin: 0;
-  padding-bottom: 10px;  
+.kapcsolodo_termek .product_image {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.kapcsolodo_termek .product_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .kapcsolodo_termek .item {padding: 10px 15px;}
@@ -1858,9 +1960,6 @@ background: url(images/news_list_divide.gif) no-repeat center top;
   background: url(images/big_price_repeat_dark.gif) repeat-x;  
 }
 
-.kapcsolodo_termek .big_price span {background: url(images/big_price_left_dark.gif) no-repeat left top;}
-
-.kapcsolodo_termek .big_price span span {background: url(images/big_price_right_dark.gif) no-repeat right top;}
 /*----------PRODUCT VIEW PAGE END----------*/
 
 

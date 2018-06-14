@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/style.css" line="197" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/style.css" line="201" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61be15cf-31e8-4811-a85b-4f49cb48bc9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/contact.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/contact.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/hirlevel.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/hirlevel.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/page.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/page.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/comment1.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/comment1.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/frontend/product.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/product.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/productlist.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/productlist.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +22,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="1636" column="12" selection-start-line="1636" selection-start-column="12" selection-end-line="1636" selection-end-column="12" />
+            <state relative-caret-position="221">
+              <caret line="563" column="28" selection-start-line="563" selection-start-column="28" selection-end-line="563" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -34,7 +31,7 @@
       <file leaf-file-name="productlist.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/frontend/productlist.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="15">
               <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
             </state>
           </provider>
@@ -43,8 +40,17 @@
       <file leaf-file-name="product.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+            <state relative-caret-position="511">
+              <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment1.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/frontend/comment1.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -53,36 +59,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>login_box .submit input</find>
-      <find>.login_box a</find>
-      <find>.contact_box</find>
-      <find>login_box .submit in</find>
-      <find>toggle_item</find>
-      <find>news_list_pag</find>
-      <find>news_list</find>
-      <find>details_link</find>
-      <find>news_list_page .more</find>
-      <find>detailed_search_box in</find>
-      <find>product_list_page .container</find>
-      <find>product_list_page</find>
-      <find>.product_list_page .buy input</find>
-      <find>.product_list_page</find>
-      <find>news_list_page</find>
-      <find>static_page .top</find>
-      <find>vodor</find>
-      <find>static_page .top h2</find>
-      <find>login_box</find>
-      <find>static_page</find>
-      <find>top h2</find>
-      <find>top</find>
       <find>.top</find>
       <find>product_lis</find>
       <find>.top h2</find>
-      <find>product_view_page</find>
       <find>product_view_page .pro</find>
-      <find>product_view_page</find>
-      <find>price_container</find>
       <find>price_cont</find>
+      <find>big_pri</find>
+      <find>big_price span</find>
+      <find>price_container</find>
+      <find>price_container .sub</find>
+      <find>productName</find>
+      <find>manufacturer</find>
+      <find>write_your_opini</find>
+      <find>form div</find>
+      <find>write_your_opinion .check .sub</find>
+      <find>form input</find>
+      <find>please</find>
+      <find>write_your_opinion</find>
+      <find>check</find>
+      <find>body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, input, form, label, textarea, img</find>
+      <find>.write_your_opinion</find>
+      <find>[type=&quot;text&quot;]</find>
+      <find>write_your</find>
+      <find>.form input</find>
+      <find>.write_your_opinion .rating span</find>
+      <find>margin-bottom: 250</find>
+      <find>kapcsolodo_termek .text_container</find>
+      <find>kapcsolodo_termek</find>
+      <find>kapcsolodo_termek .text_containe</find>
+      <find>kapcsolodo</find>
+      <find>product_view_page</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/css/css</dir>
@@ -110,6 +116,7 @@
         <option value="$PROJECT_DIR$/templates/frontend/cikktalalt.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/header.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/productlist.tpl" />
+        <option value="$PROJECT_DIR$/templates/frontend/comment1.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/product.tpl" />
         <option value="$PROJECT_DIR$/style.css" />
       </list>
@@ -125,10 +132,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="198" />
-    <option name="y" value="177" />
-    <option name="width" value="1430" />
-    <option name="height" value="810" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -202,15 +209,16 @@
       <workItem from="1528704354572" duration="22476000" />
       <workItem from="1528784015868" duration="13625000" />
       <workItem from="1528810049133" duration="6615000" />
-      <workItem from="1528877267538" duration="17318000" />
+      <workItem from="1528877267538" duration="17542000" />
+      <workItem from="1528956499115" duration="15188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69755000" />
+    <option name="totallyTimeSpent" value="85167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -221,7 +229,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32977587" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23959444" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23212379" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -243,13 +251,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/frontend/stattalalt.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/articlelist.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -571,22 +572,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/productlist.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="15">
           <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontend/comment1.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
+        <state relative-caret-position="511">
+          <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="1636" column="12" selection-start-line="1636" selection-start-column="12" selection-end-line="1636" selection-end-column="12" />
+        <state relative-caret-position="221">
+          <caret line="563" column="28" selection-start-line="563" selection-start-column="28" selection-end-line="563" selection-end-column="28" />
         </state>
       </provider>
     </entry>

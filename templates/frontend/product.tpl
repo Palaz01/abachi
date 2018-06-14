@@ -48,11 +48,35 @@
                   {/foreach} 
                   <br /> 
                 </div>
-                
-                
-
 
                 <div class="price_container">
+                  <div>
+                    <p><b>Termékváltozatok:</b></p>
+
+                    <table>
+                        <tr>
+                          <td align="left">XYZ</td>
+                          <td align="right">250 000 Ft</td>
+                        </tr>
+                    </table>
+                    <br />
+                  </div>
+                  <div>
+                    <p class="big_price">Ára:250.000 Ft</p>
+                    <div class="submit">
+                        <input type="submit" value="KOSÁRBA" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br class="clear" />
+            </div>
+                
+                
+
+                <!-- ORIGINAL PRICE CONTAINER -->
+
+                <!--<div class="price_container">
                   <div>
                     <p><b>Termékváltozatok:</b></p>
 
@@ -78,7 +102,7 @@
 
                     <!--<p class="raktar">{if $data.instock}Raktáron{else}Nincs raktáron{/if}</p>-->
 
-                    <div class="submit">
+                    <!--<div class="submit">
                       {if $data.price==0}
                       <input type="button" value="AJÁNLAT" onclick="javascript:document.location='{$contactFilename}';" />
                       {else}
@@ -89,7 +113,7 @@
                 </div>              
               </div>
               <br class="clear" />
-            </div>
+            </div>-->
             
             {if $data.price!=0} 
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -104,29 +128,33 @@
             
             {include file='comment1.tpl'}
             <!--write your opinion ends here-->
+            </div>
+           <div class="bottom"><a href="/" title="">Vissza</a></div>
+        </div>
+        <!--product view page ends here-->
             
-            
-            <!--kapcsolodo termek starts here-->
-            <div class="kapcsolodo_termek new_stuff_box">
-              <div class="container">
+        <!--kapcsolodo termek starts here-->
+        <div class="kapcsolodo_termek new_stuff_box">
+          <div class="container">
+          {if $hasonlo}
+          <div class="top">
+            <h2>KAPCSOLÓDÓ TERMÉKEK</h2>
+          </div>
+           <div class="flex">
+           {foreach from=$hasonlo item=h}
+             <div class="product">
+              <div class="product_image">
+                <img src="upload/products/{$h.image}" width="123" alt="{$h.imgalt}" title="{$h.imgtitle}" />
+              </div>
+                 <div class="text_container">
+                <h2><a href="{$h.filename}.html" title="{$h.title}">{$h.title}</a></h2>
 
-              {if $hasonlo}
-              <h2>KAPCSOLÓDÓ TERMÉKEK</h2>
+                <p>{$h.description}</p>
 
-               {foreach from=$hasonlo item=h}
-              
-                 <div class="product">
-                  <img src="upload/products/{$h.image}" width="123" alt="{$h.imgalt}" title="{$h.imgtitle}" />
-                 
-                  <div class="text_container">
-                    <h2><a href="{$h.filename}.html" title="{$h.title}">{$h.title}</a></h2>
-                    
-                    <p>{$h.description}</p>
-                    
-                    <p class="price"><span><span>{if $h.price!='0'}<b>Ára:</b> {$h.price} Ft{/if}</span></span></p>
-                    
+                <p class="price"><span><span>{if $h.price!='0'}<b>Ára:</b> {$h.price} Ft{/if}</span></span></p>
+                <div class="flex">
                     <a href="{$h.filename}.html" title="" class="details_link">RÉSZLETEK</a>
-                    
+
                     {if $h.price==0}
                     <a href="{$contactFilename}" title="" class="cart_link">AJÁNLAT</a>
                     {else}
@@ -134,27 +162,21 @@
                     <a href="{$h.addToCartFilename}.html" title="" class="cart_link">KOSÁRBA</a>
                     {/if}
                     {/if}
-  
-                    <br class="clear" />
-                  </div>
-                  <br class="clear" />
                 </div>
-              
-               
-               {/foreach}
-               
-               {/if}
-                    
-              <br class="clear" />        
-            </div>
+              </div>
             </div>
 
-            <!--kapcsolodo termek ends here-->            
-          </div>
-          
-          <div class="bottom"><a href="/" title="">Vissza</a></div>
+
+           {/foreach}
+
+           {/if}
+           </div>
+
         </div>
-        <!--product view page ends here-->
+        </div>
+
+        <!--kapcsolodo termek ends here-->
+
 
 
 
