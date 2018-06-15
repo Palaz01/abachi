@@ -32,7 +32,7 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
               <div class="item">
                 <h3>Személyes adatok</h3>
 
-                <div class="checkbox">
+                <div class="checkbox flex ">
                   <p>Neme:</p>
                   <input type="radio" name="gender" value="1" {if $gender==1}checked="checked"{/if} />
                   <label>Férfi</label>
@@ -42,21 +42,17 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
                 </div>
                 
                 <div>
-                  <label>Vezetéknév:</label>
-                  <input type="text" name="lastname" value="{$lastname}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" name="lastname" value="{$lastname}" placeholder="Vezetéknév"/>
                 </div>
                 
                 <div>
-                  <label>Keresztenév:</label>
-                  <input type="text" name="forename" value="{$forename}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" name="forename" value="{$forename}" placeholder="Keresztnév"/>
                 </div>
                 
                 <div>
-                  <label>E-mail cím:</label>
-                  <input type="text" name="email" value="{$email}" />
-                  <span>Kötelező kitölteni</span>
+                  <span class="errormessage">Kérjük helyes e-mail címet adjon meg!</span>
+                  <i class="fa fa-exclamation"></i>
+                  <input type="text" name="email" value="{$email}" placeholder="E-mail cím"/>
                 </div>
               </div>
               
@@ -69,8 +65,7 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
                 <h3>Cégadatok</h3>
                 
                 <div>
-                  <label>A cég neve:</label>
-                  <input type="text" name="company" value="{$company}" />
+                  <input type="text" name="company" value="{$company}" placeholder="A cég neve"/>
                 </div>  
                 
 
@@ -84,37 +79,27 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
               
               
                 <div>
-                  <label>Utca, házszám:</label>
-                  <input type="text" id="billingstreet" name="billingstreet" value="{$billingstreet}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="billingstreet" name="billingstreet" value="{$billingstreet}" placeholder="Utca, házszám"/>
                 </div>
                 
                 <div>
-                  <label>Irányítószám:</label>
-                  <input type="text" id="billingpostcode" name="billingpostcode" value="{$billingpostcode}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="billingpostcode" name="billingpostcode" value="{$billingpostcode}" placeholder="Irányítószám"/>
                 </div> 
                 
                 <div>
-                  <label>Város:</label>
-                  <input type="text" id="billingcity" name="billingcity" value="{$billingcity}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="billingcity" name="billingcity" value="{$billingcity}" placeholder="Város"/>
                 </div> 
                 
                 <div>
-                  <label>Megye:</label>
-                  <input type="text" id="billingcounty" class="text" name="billingcounty" value="{$billingcounty}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="billingcounty" class="text" name="billingcounty" value="{$billingcounty}" placeholder="Megye"/>
                 </div>  
                 
                 <div>
-                  <label>Ország:</label>
                    <select id="billingcountry" name="billingcountry">
-							      {foreach from=$cISO item=country}
-							        <option {if $billingcountry==$country}selected="selected"{/if} value="{$country}">{$country}</option>
-							      {/foreach}
-							    </select>
-		<span>Kötelező kitölteni</span>
+                      {foreach from=$cISO item=country}
+                        <option {if $billingcountry==$country}selected="selected"{/if} value="{$country}">{$country}</option>
+                      {/foreach}
+                    </select>
                 </div>                                                                                
               </div>
               
@@ -129,36 +114,28 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
                 <input type="checkbox"  id="katt" onclick="atrendez()"/> A szállítási és számlázási cím megegyezik
 		</div>
 		<div>
-                  <label>Utca, házszám:</label>
-                  <input type="text" id="deliverystreet" name="deliverystreet" value="{$deliverystreet}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="deliverystreet" name="deliverystreet" value="{$deliverystreet}" placeholder="Utca, házszám"/>
                 </div>
                 
                 <div>
-                  <label>Irányítószám:</label>
-                  <input type="text" id="deliverypostcode" name="deliverypostcode" value="{$deliverypostcode}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="deliverypostcode" name="deliverypostcode" value="{$deliverypostcode}" placeholder="Irányítószám"/>
                 </div> 
                 
                 <div>
-                  <label>Város:</label>
-                  <input type="text" id="deliverycity" name="deliverycity" value="{$deliverycity}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="deliverycity" name="deliverycity" value="{$deliverycity}" placeholder="Város"/>
                 </div> 
                 
                 <div>
-                  <label>Megye:</label>
-                  <input type="text" id="deliverycounty" class="text" name="deliverycounty" value="{$deliverycounty}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" id="deliverycounty" class="text" name="deliverycounty" value="{$deliverycounty}" placeholder="Megye"/>
                 </div>  
                 
                 <div>
                   <label>Ország:</label>
                   <select id="deliverycountry" name="deliverycountry">
-							      {foreach from=$cISO item=country}
-							        <option {if $billingcountry==$country}selected="selected"{/if} value="{$country}">{$country}</option>
-							      {/foreach}
-							    </select>
+                    {foreach from=$cISO item=country}
+                      <option {if $billingcountry==$country}selected="selected"{/if} value="{$country}">{$country}</option>
+                    {/foreach}
+                  </select>
                 </div> 
               </div> 
               
@@ -172,14 +149,11 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
               
               
                 <div>
-                  <label>Telefonszám:</label>
-                  <input type="text" name="telephone" value="{$telephone}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="text" name="telephone" value="{$telephone}" placeholder="Telefonszám"/>
                 </div>  
                 
                 <div>
-                  <label>Fax szám:</label>
-                  <input type="text" name="fax" value="{$fax}" />
+                  <input type="text" name="fax" value="{$fax}" placeholder="Fax szám"/>
                   <span>&nbsp;</span>
                 </div>                                  
               </div>
@@ -193,17 +167,15 @@ document.getElementById('deliverycountry').value=document.getElementById('billin
   
                 
                 <div>
-                  <label>Jelszó:</label>
-                  <input type="password" name="password1" value="{$password1}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="password" name="password1" value="{$password1}" placeholder="Jelszó"/>
                 </div>  
                 
                 <div>
-                  <label>Jelszó megerősítés:</label>
-                  <input type="password" name="password2" value="{$password2}" />
-                  <span>Kötelező kitölteni</span>
+                  <input type="password" name="password2" value="{$password2}" placeholder="Jelszó megerősítés"/>
                 </div>                                  
               </div>
+
+              <div class="star_text"><p>A *-al jelölt mezők kitöltése kötelező.</p></div>
               
               
 		<input type="hidden" name="regstarted" value="1" />              

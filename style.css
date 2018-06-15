@@ -36,6 +36,10 @@ select {
     font-size: 13px;
     color: #686767;
 }
+
+input:focus {
+    outline-color: #c06d32;
+}
 .submit input, input.submit {cursor: pointer;}
 
 body {
@@ -1321,7 +1325,7 @@ p {line-height: 18px;}
     width: 160px;
 }
 
-.static_page .form input, .registration_page input, .detailed_search_page input {
+.static_page .form input, .detailed_search_page input {
     background: url(images/input.png) no-repeat;
     border: 0;
     margin: 0;
@@ -1371,17 +1375,12 @@ p {line-height: 18px;}
 
 .registration_page {margin-bottom: 0;}
 
-.registration_page h2 {
-    background: url(images/staticPageHeaderTop.png) no-repeat;
-    line-height: 35px;
-    color: #eee3bd;
-    font-size: 20px;
-    padding-left: 15px; padding-top: 10px;
-}
 
 .registration_page h3 {
     color: #ba642d;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+
 }
 
 .registration_page .form {padding: 0;}
@@ -1441,7 +1440,161 @@ p {line-height: 18px;}
     margin-bottom: 15px;
     width: 708px;  height: 13px;
 }
-/*----------REGISTRATION PAGE END----------*/
+
+/* NEW REGISTRATION PAGE STYLES */
+
+.registration_page {
+    border: solid 1px #bab293;
+    margin-bottom: 41px;
+    padding-bottom: 41px;
+}
+
+.registration_page .form {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.registration_page .form .item {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registration_page .form .item input[type="text"],
+.registration_page select,
+.registration_page .form .item input[type="password"]{
+    border: solid 1px #bab293;
+    padding: 15px 10px;
+}
+
+.registration_page .form .item input[type="text"],
+.registration_page .form .item input[type="password"]{
+    width: calc(100% - 20px);
+}
+
+.registration_page select {
+    width: 100%;
+    background: #fff;
+}
+
+.registration_page .form .item h3 {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.registration_page .form .item div {
+    width: calc(50% - 60px);
+    padding: 0 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.registration_page .form .item div .errormessage{
+    position: absolute;
+    right: 40px;
+    top: -24px;
+    background: red;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    min-width: 180px;
+    text-align: center;
+}
+
+.registration_page .form .item div .errormessage::after {
+    width: 10px;
+    height: 10px;
+    background: red;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+
+.registration_page .form .item div i {
+    position: absolute;
+    right: 46px;
+    top: 10px;
+    color: red;
+    width: 25px;
+    height: 25px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 17px;
+}
+
+.registration_page .form .submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    padding-right: 15px;
+}
+
+.registration_page .form input[type="submit"] {
+    background: #cacbc7;
+    color: #fff;
+    padding: 10px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    height: 40px;
+    margin: 0;
+    font-family: Arial;
+}
+
+.registration_page .form input[type="submit"]:hover {
+    background: #505050;
+}
+
+.registration_page .top {
+    margin-bottom: 30px;
+}
+
+.registration_page .star_text {
+    padding-left: 45px;
+}
+
+.registration_page .star_text p {
+    white-space: nowrap;
+    font-size: 13px;
+    color: #c06d32;
+}
+
+.registrationPageBottom {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*----------REGISTRATION PAGE END----------*/
 
 
 /*----------PRODUCT LIST PAGE START----------*/
