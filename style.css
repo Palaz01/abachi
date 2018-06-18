@@ -291,7 +291,6 @@ p {line-height: 18px;}
     width: 76px;  height: 29px; line-height: 29px;
     padding: 0 0 3px 0;
     color: white;
-    font-size: 12px;  font-family: Century Gothic, Times New Roman;
     border: 0;
 }
 
@@ -709,7 +708,8 @@ p {line-height: 18px;}
     display: block;
     background: url(images/newsletter_link.gif) no-repeat;
     color: white;
-    font-family: Century Gothic, Times New Roman;  font-size: 19px;  font-weight: bold;
+    font-size: 19px;
+    font-weight: bold;
     text-align: center; text-decoration: none;
 }
 .newsletter_link:hover {color: #432507;}
@@ -861,18 +861,6 @@ p {line-height: 18px;}
 
 .new_stuff_box p {
     margin-bottom: 20px;
-}
-
-
-.cart_page div.submit .pay, .cart_page .orders a {
-    font-family: Century Gothic, Times New Roman;  font-size: 12px;
-    color: white;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    text-align: center;
-    height: 29px; line-height: 29px;
-    text-decoration: none;
 }
 
 .new_stuff_box .product-buttons{
@@ -1334,7 +1322,6 @@ p {line-height: 18px;}
 
 .static_page .form .submit input {
     float: right;
-    font-family: Century Gothic, Times New Roman;
     padding: 0;
     width: 104px;  height: 29px;
 }
@@ -2137,6 +2124,7 @@ p {line-height: 18px;}
     border: solid 1px #bab293;
     margin-bottom: 41px;
     padding-bottom: 41px;
+    background: #fff;
 }
 
 .cart_page .container {padding: 0;}
@@ -2209,6 +2197,111 @@ p {line-height: 18px;}
     align-items: center;
     padding: 0 30px;
 }
+
+.cart_page .reg_or_login_text {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.54;
+    color: #c06d32;
+    margin-bottom: 25px;
+}
+
+.cart_page .submit.reg_or_login_buttons {
+    padding-top: 0;
+}
+
+.cart_page div.submit.reg_or_login_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto 30px auto;
+}
+
+.cart_page .reg_or_login_buttons .pay {
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.cart_page .reg_or_login_buttons .pay:first-child {
+    margin-bottom: 10px;
+    color: #fff;
+    background: #383838;
+    border: 1px solid #383838;
+}
+
+.cart_page .reg_or_login_buttons .pay:first-child:hover {
+    background: #505050;
+}
+
+.cart_page .reg_or_login_buttons .pay:last-child {
+    color: #c06d32;
+    border: 1px solid #c06d32;
+    background: #fff;
+}
+
+.cart_page .reg_or_login_buttons .pay:last-child:hover {
+    background: #c06d32;
+    color: #fff;
+}
+
+.cart_page .cart_buttons,
+.cart_page .reg_or_login_buttons
+{
+    padding-right: 20px;
+}
+
+.cart_page .cart_buttons .pay,
+.cart_page .cart_buttons a {
+    color: #c06d32;
+    border: 1px solid #c06d32;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    background: #fff;
+}
+
+.cart_page .cart_buttons .pay:hover,
+.cart_page .cart_buttons a:hover {
+    background: #c06d32;
+    color: #fff;
+}
+
+
+.cart_page .cart_buttons a {
+    margin-right: 10px;
+}
+
+.cart_page .cart_buttons .recount {
+    color: #fff;
+    background: #383838;
+    border: 1px solid #383838;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.cart_page .cart_buttons .recount:hover {
+    background: #505050;
+}
+
 
 .cart_page .even td {background-color: #e9deb8;}
 
@@ -2311,11 +2404,11 @@ p {line-height: 18px;}
 
 
 
-.cart_page table input {
+/*.cart_page table input {
     width: 46px;  height: 27px;
     border: 1px solid #5a3512;
     margin-right: 30px;
-}
+}*/
 
 .cart_page .quantity .submit {
     width: 12px;  height: 18px;
@@ -2386,24 +2479,15 @@ p {line-height: 18px;}
 
 .cart_page div.submit input {
     float: right !important;
-    font-family: Century Gothic, Times New Roman !important;
-}
-
-.cart_page div.submit .pay, .cart_page div.submit .pay:hover {
-    background: url(images/orangeLinkSmall.png) no-repeat;
-    margin: 0 0 0 10px;
-    width: 84px;  height: 29px;  line-height: 29px;
-}
-
-.cart_page div.submit .recount {
-    width: 101px; height: 29px;
-    font-size: 12px;
-    background: url(images/recount.png) no-repeat;
 }
 
 .cart_page select {
     width: 200px;
     margin-right: 110px;
+    padding: 15px 0;
+    border-color: #bab293;
+    background-color: transparent;
+    margin: 0;
 }
 
 .cart_page .checkbox label, .cart_page .checkbox input {float: left;}
@@ -2419,6 +2503,33 @@ p {line-height: 18px;}
 .cart_page .textarea textarea {
     width: 500px; height: 105px;
     border: 1px solid #6d4018;
+}
+
+.cart_page .payment_information p {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.cart_page .select_payment {
+    display: flex;
+    justify-content: center;
+}
+
+.cart_page .select_payment p {
+    text-align: left;
+    padding-left: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ba642d;
+    margin-bottom: 16px;
+}
+
+.cart_page .select_payment select {
+    width: 330px;
+}
+
+.cart_page .select_payment option {
+    padding: 15px 0;
 }
 /*----------CART PAGE END----------*/
 
@@ -2475,7 +2586,6 @@ p {line-height: 18px;}
     color: white;
     cursor: pointer;
     float: right;
-    font-family: Century Gothic, Times New Roman;
     margin: 0;
     padding: 0;
     width: 104px;  height: 29px;  line-height: 29px;
@@ -2518,15 +2628,23 @@ p {line-height: 18px;}
 /*----------DETAILED SEARCH PAGE END----------*/
 
 
-.registration_box {margin-top: 15px;}
-
-.registration_box input, .registration_box label {float: left;}
+.registration_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .registration_box input {
+    padding: 13px 10px;
+    width: 310px;
     border: 1px solid #BAB293 !important;
-    margin-bottom: 5px;
-    width: 220px !important; height: 20px !important;
 }
+
+.registration_box input:first-child {
+    margin-bottom: 10px;
+}
+
+.registration_box input, .registration_box label {float: left;}
 
 
 .static_page .check {
@@ -2567,7 +2685,6 @@ p {line-height: 18px;}
     background: url(images/submit.png) no-repeat;
     color: white;
     display: block;
-    font-family: Century Gothic, Times New Roman;
     margin: 5px 0;
     text-align: center;  text-decoration: none;
     width: 104px;  height: 29px;  line-height: 29px;

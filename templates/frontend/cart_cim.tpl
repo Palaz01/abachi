@@ -16,11 +16,25 @@
           
           <div class="container">
             <div class="links">
-              <a href="{$cartFilename}" title="" id="link1">1. KOSÁR</a>
-              <a title="" id="link2" class="active">2. CÍM</a>
-              <a href="{$vszall}" title="" id="link3">3. SZÁLLÍTÁS</a>
-              <a href="{$vfiz}" title="" id="link4">4. FIZETÉS</a>
-              <a href="javascript:void(0)" title="" onclick="document.review.submit();" id="link5">5. RENDELÉS</a>
+              <a href="{$cartFilename}" title="" id="link1">
+                <div class="cart_status_icon"></div>
+                <span>KOSÁR</span>
+              </a>
+              <a title="" id="link2" class="active">
+                  <div class="cart_status_icon"></div>
+                  <span>CÍM</span>
+              </a>
+              <a href="{$vszall}" title="" id="link3">
+                  <div class="cart_status_icon"></div>
+                  <span>SZÁLLÍTÁS</span>
+              <a href="{$vfiz}" title="" id="link4">
+                  <div class="cart_status_icon"></div>
+                  <span>FIZETÉS</span>
+              </a>
+              <a href="javascript:void(0)" title="" onclick="document.review.submit();" id="link5">
+                  <div class="cart_status_icon"></div>
+                  <span>RENDELÉS</span>
+              </a>
 
               <br class="clear" />
              </div>
@@ -37,33 +51,31 @@
   
                       <tr> 
                         <td> 
-  {if ($userbelepett)!=""}
+                        {if ($userbelepett)!=""}
                           <b>{$userbelepett}</b><br /> 
                           {$k_b_orszag}<br /> 
                           {$k_b_irszam} {$k_b_varos}<br /> 
                           {$k_b_cim}
-{else}
+                        {else}
 
-<p align="center"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
- 
- <div class="registration_box">
- <label>Email cím :</label><input type="text" name="loguser" id="loguser"/><br class="clear" />
- <label>Jelszó:</label><input type="password" name="logpwd" id="logpwd"/>
- </div>
- 
- <div class="submit">
+                         <p align="center" class="reg_or_login_text"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
 
-  <input class="pay" type="button" style="border:none" onclick="document.cimmod.submit();" value="Regisztrál" />
- <input class="pay" type="button" style="border:none" onclick="document.login.login_email.value=document.getElementById('loguser').value; document.login.login_password.value=document.getElementById('logpwd').value; document.login.submit();  " value="Belépés" />
- </div>
-{/if}
+                         <div class="registration_box">
+                            <input type="text" name="loguser" id="loguser" placeholder="E-mail cím"/>
+                            <input type="password" name="logpwd" id="logpwd" placeholder="Jelszó"/>
+                         </div>
                         </td> 
                       </tr> 
                     </tbody> 
-                  </table> 
-                </div> 
+                  </table>
+                </div>
+                 <div class="submit reg_or_login_buttons">
+                     <input class="pay" type="button"  onclick="document.cimmod.submit();" value="Regisztrál" />
+                     <input class="pay" type="button"  onclick="document.login.login_email.value=document.getElementById('loguser').value; document.login.login_password.value=document.getElementById('logpwd').value; document.login.submit();  " value="Belépés" />
+                 </div>
+                 {/if}
                 
-                <div class="submit"> 
+                <div class="submit cart_buttons">
                   <a href="{$cartFilename}" title="">vissza a kosárhoz</a> 
                   
                   <input class="pay" type="submit" onclick="document.tovabb.submit();" value="SZÁLLÍTÁS" /> 

@@ -58,11 +58,26 @@ function checkit()
           
           <div class="container">
             <div class="links">
-              <a href="{$cartFilename}" title="" id="link1">1. KOSÁR</a>
-              <a href="{$vcim}" title="" id="link2">2. CÍM</a>
-              <a title="" id="link3" class="active">3. SZÁLLÍTÁS</a>
-              <a href="javascript:void(0)" title="" onclick="document.getElementById('vszm').value=document.getElementById('szmod').value; document.tovabb.submit();" id="link4">4. FIZETÉS</a>
-              <a href="javascript:void(0)" title="" onclick="document.review.submit();" id="link5">5. RENDELÉS</a>
+              <a href="{$cartFilename}" title="" id="link1">
+                  <div class="cart_status_icon"></div>
+                  <span>KOSÁR</span>
+              </a>
+              <a href="{$vcim}" title="" id="link2">
+                  <div class="cart_status_icon"></div>
+                  <span>CÍM</span>
+              </a>
+              <a title="" id="link3" class="active">
+                  <div class="cart_status_icon"></div>
+                  <span>SZÁLLÍTÁS</span>
+              </a>
+              <a href="javascript:void(0)" title="" onclick="document.getElementById('vszm').value=document.getElementById('szmod').value; document.tovabb.submit();" id="link4">
+                  <div class="cart_status_icon"></div>
+                  <span>FIZETÉS</span>
+              </a>
+              <a href="javascript:void(0)" title="" onclick="document.review.submit();" id="link5">
+                  <div class="cart_status_icon"></div>
+                  <span>RENDELÉS</span>
+              </a>
 
               <br class="clear" />
             </div>
@@ -115,16 +130,15 @@ function checkit()
 </div>
 			  {else}
 
-<p align="center"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
+<p align="center" class="reg_or_login_text"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
  <div class="registration_box">
- <label>Email cím :</label><input type="text" name="loguser" id="loguser" style="width:150px"/><br class="clear" />
- <label>Jelszó:</label><input type="password" name="logpwd" id="logpwd" style="width:150px"/>
+ <input type="text" name="loguser" id="loguser" placeholder="E-mail cím" />
+ <input type="password" name="logpwd" id="logpwd"  placeholder="Jelszó"/>
  </table>
  
- <div class="submit">
-
-  <input class="pay" type="button" style="border:none" onclick="document.cimmod.submit();" value="Regisztrál" />
- <input class="pay" type="button" style="border:none" onclick="document.login.login_email.value=document.getElementById('loguser').value; document.login.login_password.value=document.getElementById('logpwd').value; document.login.submit();  " value="Belépés" />
+ <div class="submit reg_or_login_buttons">
+    <input class="pay" type="button"  onclick="document.cimmod.submit();" value="Regisztrál" />
+    <input class="pay" type="button"  onclick="document.login.login_email.value=document.getElementById('loguser').value; document.login.login_password.value=document.getElementById('logpwd').value; document.login.submit();  " value="Belépés" />
  </div>
 {/if}
 			  
@@ -132,7 +146,7 @@ function checkit()
                       </tr> 
                     </tbody> 
                   </table> 
-                </div> 
+                </div>
 		
                 <script>
 		  
@@ -177,7 +191,7 @@ function checkit()
                   </table> 
                 </div>
 
-                <div class="submit"> 
+                <div class="submit cart_buttons">
                   <a href="{$cartFilename}" title="">vissza a kosárhoz</a> 
                   
                   <input class="pay" type="submit" onclick="document.getElementById('vszm').value=document.getElementById('szmod').value;  document.tovabb.submit();" value="FIZETÉS" /> 

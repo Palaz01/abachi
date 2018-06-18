@@ -18,11 +18,26 @@
           
           <div class="container">
             <div class="links">
-              <a href="{$cartFilename}" title="" id="link1">1. KOSÁR</a>
-              <a href="{$vcim}" title="" id="link2">2. CÍM</a>
-              <a href="{$vszall}" title="" id="link3">3. SZÁLLÍTÁS</a>
-              <a href="#" title="" id="link4"  class="active">4. FIZETÉS</a>
-              <a href="javascript:void(0)" title="" onclick="document.dejo.submit();" id="link5">5. RENDELÉS</a>
+              <a href="{$cartFilename}" title="" id="link1">
+                  <div class="cart_status_icon"></div>
+                  <span>KOSÁR</span>
+              </a>
+              <a href="{$vcim}" title="" id="link2">
+                  <div class="cart_status_icon"></div>
+                  <span>CÍM</span>
+              </a>
+              <a href="{$vszall}" title="" id="link3">
+                  <div class="cart_status_icon"></div>
+                  <span>SZÁLLÍTÁS</span>
+              </a>
+              <a href="#" title="" id="link4"  class="active">
+                  <div class="cart_status_icon"></div>
+                  <span>FIZETÉS</span>
+              </a>
+              <a href="javascript:void(0)" title="" onclick="document.dejo.submit();" id="link5">
+                  <div class="cart_status_icon"></div>
+                  <span>RENDELÉS</span>
+              </a>
 
               <br class="clear" />
             </div>
@@ -32,48 +47,51 @@
   
               <div class="item">
                 <div class="bg">
-			<table cellpadding="0" cellspacing="0" width="688"> 
-                    <tbody> 
-                      <tr> 
-                        <th>Válassza ki az Önnek megfelelő fizetési módot</th> 
-                      </tr> 
-			<tr>
-				<td>
-<div style="margin-left:25px">
-                  
-                  {foreach from=$paymentModes item=paymentMode key=key}              
-                          <input class="fizetes_radio_button" type="radio" name="paymentmode" value="{$key}" id="pmr{$key}" {if $paymod==$key}checked="checked"{/if}><b>{$paymentMode}</b>
-			                     
-					      <br/>
-                  {/foreach}
-</div><br/>
-</td>
-</tr>
-                      <tr> 
-                        <th>Fizetési információk</th> 
-                      </tr> 
-<tr><td class="fck">
-                  {$fleiras}
-                  <p>
-                    <br />
-                    Banki átutalás esetén kérjük tüntesse fel az átutalás közlemény mezőjében az alábbi megrendelési azonosítót:
-                    <br />
-                    <b>{$noOfOrder}</b>
-                  </p>
-                </td>
-		</tr>
-		</tbody>
-		</table>
-		</div>
+                  <table cellpadding="0" cellspacing="0" width="688">
+                    <tbody>
+                      <tr>
+				        <td>
+                            <div class="select_payment">
+                              <div>
+                                  <p>Fizetés módja</p>
+                                  <select name="Válasszon fizetési módot" id="">
+                                      <option value="">egy</option>
+                                      <option value="">kettő</option>
+                                      <option value="">három</option>
+                                  </select>
+                              </div>
+                              <!--{foreach from=$paymentModes item=paymentMode key=key}
+                                      <input class="fizetes_radio_button" type="radio" name="paymentmode" value="{$key}" id="pmr{$key}" {if $paymod==$key}checked="checked"{/if}><b>{$paymentMode}</b>
+
+                                      <br/>
+                              {/foreach}-->
+                            </div><br/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Fizetési információk</th>
+                      </tr>
+                      <tr>
+                        <td class="fck payment_information">
+                            {$fleiras}
+                          <p>
+                              <br />
+                              Banki átutalás esetén kérjük tüntesse fel az átutalás közlemény mezőjében az alábbi megrendelési azonosítót:
+                              <br />
+                              <b>{$noOfOrder}</b>
+                          </p>
+                        </td>
+                      </tr>
+		            </tbody>
+                  </table>
+		        </div>
 		
          
-                <div class="submit">
+                <div class="submit cart_buttons">
                   <a href="javascript:void(0)" onClick="location.href='{$cartFilename}';" title="">Vissza a kosárhoz</a>
-		  <input type="hidden" name="review" id="review" value="0" />
-		  <input type="hidden" name="refresh" id="refresh" value="0" />
-
+                  <input type="hidden" name="review" id="review" value="0" />
+                  <input type="hidden" name="refresh" id="refresh" value="0" />
                   <input class="pay" type="submit" value="RENDELÉS" onclick="document.dejo.submit();"/>
-                  
 
                   <br class="clear" />
                 </div>
@@ -81,10 +99,8 @@
             </div>
 
           </div>
-
-          <div class="bottom"></div>
         </div>
-        <!--cart page ends here-->
+    <!--cart page ends here-->
 </form>
 
     
