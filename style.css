@@ -2907,3 +2907,33 @@ hr.divide {
     padding: 5px;
 }
 /*----------FCK END----------*/
+
+/*----------CONTACT PAGE----------*/
+
+.contact_page .form {
+    max-width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_page h2,
+.contact_page .form p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact_page .form p {
+    color: #b9632d;
+}
+
+.contact_page_text {
+    display: flex;
+}
+
+.contact_page_text .google_map {
+    width: 50%;
+}
+
+.contact_page_text .fck {
+    width: 50%;
+}

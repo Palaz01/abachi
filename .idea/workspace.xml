@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61be15cf-31e8-4811-a85b-4f49cb48bc9e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/cart_cim.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/cart_cim.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/cart_fizetes.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/cart_fizetes.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/frontend/cart_szallitas.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/cart_szallitas.tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/frontend/contact.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/templates/frontend/contact.tpl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="2484" column="17" lean-forward="true" selection-start-line="2484" selection-start-column="17" selection-end-line="2484" selection-end-column="17" />
+            <state relative-caret-position="305">
+              <caret line="2927" selection-start-line="2927" selection-end-line="2927" />
             </state>
           </provider>
         </entry>
@@ -83,20 +80,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productlist.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/frontend/productlist.tpl">
+      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+            <state relative-caret-position="225">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
+      <file leaf-file-name="contact.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/frontend/contact.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2580">
-              <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
+            <state relative-caret-position="480">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -114,9 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>min-width</find>
-      <find>további</find>
-      <find>.news_list_page .more</find>
       <find>cart_sta</find>
       <find>cart_quant</find>
       <find>cart</find>
@@ -142,8 +136,11 @@
       <find>számlázási cím</find>
       <find>&lt;p&gt;fizetés</find>
       <find>reg_or_login_text</find>
-      <find>payment</find>
       <find>Önnek megfele</find>
+      <find>class=&quot;product&quot;</find>
+      <find>payment</find>
+      <find>contact_us</find>
+      <find>contact</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/css/css</dir>
@@ -179,6 +176,7 @@
         <option value="$PROJECT_DIR$/templates/frontend/cart_cim.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/cart_szallitas.tpl" />
         <option value="$PROJECT_DIR$/templates/frontend/cart_fizetes.tpl" />
+        <option value="$PROJECT_DIR$/templates/frontend/contact.tpl" />
         <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
@@ -274,12 +272,12 @@
       <workItem from="1528956499115" duration="18076000" />
       <workItem from="1529051601456" duration="4911000" />
       <workItem from="1529063797502" duration="11895000" />
-      <workItem from="1529307101987" duration="14465000" />
+      <workItem from="1529307101987" duration="17950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119326000" />
+    <option name="totallyTimeSpent" value="122811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
@@ -315,13 +313,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8280">
-          <caret line="552" column="59" selection-start-line="552" selection-start-column="57" selection-end-line="552" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -599,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
-          <caret line="172" column="17" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/webshop-subpage.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -641,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/frontend/cart_szallitas.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="78" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/frontend/cart_fizetes.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -655,10 +632,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontend/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontend/cart_szallitas.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="78" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/frontend/contact.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="2484" column="17" lean-forward="true" selection-start-line="2484" selection-start-column="17" selection-end-line="2484" selection-end-column="17" />
+        <state relative-caret-position="305">
+          <caret line="2927" selection-start-line="2927" selection-end-line="2927" />
         </state>
       </provider>
     </entry>
