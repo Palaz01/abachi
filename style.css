@@ -1084,6 +1084,10 @@ p {line-height: 18px;}
 }
 
 .static_page .bottom a:hover, .news_view_page .bottom a:hover, .product_view_page .bottom a:hover {text-decoration: none;}
+
+
+.stat
+
 /*----------STATIC PAGE END----------*/
 
 
@@ -1257,17 +1261,7 @@ p {line-height: 18px;}
 
 .form .check img {border: 0;}
 
-.form label, .form input, .form textarea, .form img {float: left;}
 
-.form label, .registration_box label {
-    display: block;
-    width: 90px;
-    text-align: right;
-    margin-right: 10px;
-    color: #3a5100;
-    font-weight: bold;
-    line-height: 20px;
-}
 
 .form input, .form textarea {
     background-color: white;
@@ -1290,30 +1284,7 @@ p {line-height: 18px;}
     padding: 5px;
 }
 
-.form .submit input {
-    background: url(images/green_link.png) no-repeat;
-    width: 76px;  height: 29px;  line-height: 29px;
-    padding: 0;
-    margin: 0 0 0 100px;
-    border: 0;
-    font-family: Trajan Pro;  font-size: 12px;
-    color: white;
-    text-align: center;
-}
-
-.form .submit input:hover {background: url(images/green_link_hover.png) no-repeat;}
-
-
-.static_page .form {width: 518px;}
-
-.static_page .form label, .registration_page label {
-    color: #393939;
-    font-size: 12px;  font-weight: normal;
-    text-align: left;
-    width: 160px;
-}
-
-.static_page .form input, .detailed_search_page input {
+.detailed_search_page input {
     background: url(images/input.png) no-repeat;
     border: 0;
     margin: 0;
@@ -1328,18 +1299,7 @@ p {line-height: 18px;}
 
 .static_page .form .textarea {height: 155px;}
 
-.static_page .form textarea {
-    background: url(images/textarea.png) no-repeat;
-    border: 0;
-    width: 338px;  height: 145px;
-}
 
-.static_page .form .check input {
-    background: url(images/inputSmall.png) no-repeat;
-    border: 0;
-    float: right;
-    width: 165px;
-}
 
 .static_page .form .check img {
     margin-top: 7px;
@@ -1360,7 +1320,10 @@ p {line-height: 18px;}
     width: auto !important;
 }
 
-.registration_page {margin-bottom: 0;}
+.registration_page {
+    margin-bottom: 0;
+    background: #fff;
+}
 
 
 .registration_page h3 {
@@ -2654,11 +2617,6 @@ p {line-height: 18px;}
 
 .static_page .check label, .static_page .check input {float: left;}
 
-.static_page .check label {
-    display: block;
-    line-height: 50px;
-    /*width: 80px;*/
-}
 
 .static_page .check input {
     border: 1px solid #BAB293;
@@ -2765,14 +2723,6 @@ p {line-height: 18px;}
     padding-top: 10px !important;
     width: 600px; height: 107px;
 }
-
-hr.divide {
-    background: url(images/news_list_divide.gif) repeat-x;
-    border: 0;
-    height: 3px;
-    margin: 10px 0;
-}
-
 
 .nameContainer {
     background: url(images/nameContainer.png) no-repeat;
@@ -2910,20 +2860,16 @@ hr.divide {
 
 /*----------CONTACT PAGE----------*/
 
-.contact_page .form {
-    max-width: 710px;
-    margin-left: auto;
-    margin-right: auto;
+.contact_page .contact_abachi_logo {
+    height: 144px;
+    width: 220px;
+    background-color: #ffe9ac;
+    border: solid 1px #8c3500;
+    margin-bottom: 20px;
 }
 
-.contact_page h2,
-.contact_page .form p {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.contact_page .form p {
-    color: #b9632d;
+.contact_page .divide {
+    margin-bottom: 27px;
 }
 
 .contact_page_text {
@@ -2932,8 +2878,129 @@ hr.divide {
 
 .contact_page_text .google_map {
     width: 50%;
+    width: 450px;
+    height: 325px;
+    margin-bottom: 20px;
+    margin-right: 30px;
 }
 
 .contact_page_text .fck {
     width: 50%;
+}
+
+.contact_page .form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact_page .form {
+    max-width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_page .form h2,
+.contact_page .form p {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact_page .form p {
+    color: #b9632d;
+}
+
+.contact_page .form .text_inputs,
+.contact_page .form .textarea {
+    width: calc(50% - 30px);
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    min-height: 170px;
+}
+
+.contact_page .form .check {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact_page .form .check input {
+    padding: 15px 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    width: calc(100% - 20px);
+}
+
+.contact_page .form .check img {
+    height: 100%;
+}
+
+.contact_page .form .check label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #5a3512;
+    margin: 25px 0;
+}
+
+.contact_page .form div input[type="text"],
+.contact_page .form div textarea {
+    padding: 15px 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    width: calc(100% - 20px);
+}
+
+.contact_page .form div textarea {
+    height: 100%;
+}
+
+.contact_page .form div input[type="text"] {
+    margin-bottom: 10px;
+}
+
+.contact_page .repeat {
+    min-height: 800px;
+}
+
+.contact_page .form .submit {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(50% - 30px);
+}
+
+.contact_page .form .accept {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+.contact_page .form .accept input {
+    width: 20px;
+    height: 20px;
+    border: solid 1px #bab293;
+    margin-right: 10px;
+}
+
+.contact_page .form .accept p {
+    font-size: 13px;
+    color: #5a3512;
+}
+
+.contact_page .form .submit input[type="submit"] {
+    width: 100%;
+    background-color: #383838;
+    color: #fff;
+    border: 1px solid #383838;
+    height: 40px;
+}
+
+.contact_page .form .submit input[type="submit"]:hover {
+    background: #505050;
+    border-color: #505050;
 }
