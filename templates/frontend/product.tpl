@@ -9,8 +9,27 @@
           <div class="container">
             <div class="product">
               <div class="product_info_left">
-                <a class="first" href="{#pt#}{$data.image}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery" title="{$data.title}"><img class="first" border="0" width="228" src="{#pt#}{$data.image}&w=228&zc=1" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} /></a>
-                <!-- CAROUSEL!!!!!! -->
+                <a class="first" href="{#pt#}{$data.image}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery" title="{$data.title}">
+                    <!--<img class="first" border="0" width="228" src="{#pt#}{$data.image}&w=228&zc=1" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} />-->
+                    <img class="first" border="0" width="228" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} />
+                </a>
+
+                  <div class="jquery_gallery_container">
+                      <div class="jquery_gallery">
+                          <ul style=" list-style-type: none">
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                              <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                          </ul>
+                      </div>
+                  </div>
+
+
+
                 <!--{if $images}
                   <div class="jquery_gallery_container">
                     <div class="jquery_gallery">
@@ -54,17 +73,23 @@
                     <p><b>Termékváltozatok:</b></p>
 
                     <table>
+                        {foreach from=$editions item=edition}
                         <tr>
-                          <td align="left">XYZ</td>
-                          <td align="right">250 000 Ft</td>
+                          <td align="left">{$edition.title_1}</td>
+                          <td align="right">{if $edition.price!='0'}{$edition.price|commify:-1:',':'.'} Ft{/if}</td>
                         </tr>
+                        {/foreach}
                     </table>
                     <br />
                   </div>
                   <div>
-                    <p class="big_price">Ára:250.000 Ft</p>
+                    <p class="big_price">{if $data.price!='0'}Ára: {$data.price|commify:-1:',':'.'} Ft{/if}</p>
                     <div class="submit">
-                        <input type="submit" value="KOSÁRBA" />
+                        {if $edition.price==0}
+                        <input type="submit" value="AJÁNLAT" onclick="javascript:document.location='{$contactFilename}';" />
+                        {else}
+                        <input type="submit" value="Kosárba" border="0" title="Kosárba" alt="Kosárba" onClick="javascript:document.location='{$edition.addToCartFilename}';"/>
+                        {/if}
                     </div>
                   </div>
                 </div>

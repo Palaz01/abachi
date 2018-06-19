@@ -32,6 +32,7 @@
                             <a href="{$product.filename}.html">{$product.title}</a>
                         </div>
                         <div class="manufacturer">
+                            <p>Gyártó: </p>
                             <a href="{$product.manufacturerurl}.html">{$product.manufacturer}</a>
                         </div>
 
