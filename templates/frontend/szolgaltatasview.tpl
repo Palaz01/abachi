@@ -24,19 +24,33 @@
             
             
             <br class="clear" />
-            {if $images}
-           <!--gallery starts here-->
-	  <div class="jquery_gallery_container">
-          <div class="jquery_gallery">
-            <ul>
-              
-            {foreach from=$images item=image}
-              <li><a href="{#pt#}upload/articles/{$image.filename}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery"><img style="border:none;" src="{#pt#}upload/articles/{$image.filename}&h=107" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
-            {/foreach}
-            </ul>
+
+           <!-- TEST GALLERY -->
+          <div class="jquery_gallery_container">
+              <div class="jquery_gallery">
+                  <ul>
+                      <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                      <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                      <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                      <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                  </ul>
+              </div>
           </div>
-        </div>
-{/if}
+
+           {if $images}
+           <!--gallery starts here-->
+            <!--
+            <div class="jquery_gallery_container">
+              <div class="jquery_gallery">
+                <ul>
+
+                {foreach from=$images item=image}
+                  <li><a href="{#pt#}upload/articles/{$image.filename}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery"><img style="border:none;" src="{#pt#}upload/articles/{$image.filename}&h=107" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                {/foreach}
+                </ul>
+              </div>
+            </div>-->
+            {/if}
             
             
             {if $similarArticles}

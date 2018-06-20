@@ -5,69 +5,25 @@
     <div class="vodor"></div>
   </div>
 
-  <div class="form">
+  <p class="form">
     {include file='errors.tpl'}
-    
+
     <br />
-    <form name="password_forgotten" action="{$forgotFilename}" method="post"><table border="0" width="100%" cellspacing="0" cellpadding="0">
-          <tr>
-            <td><table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-left: 10px;">
-              <tr>
-    
-                <td class="pageHeading">Elfelejtettem a jelszavam !</td>
-              </tr>
-            </table></td>
-          </tr>
-          
-          <tr>
-    
-            <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
-    
-    
-    </table>
-    </td>
-          </tr>
-         
-          <tr>
-            <td><table border="0" width="100%" height="100%" cellspacing="1" cellpadding="2" class="infoBox" style="margin-left: 5px;">
-              <tr class="infoBoxContents">
-                <td><table border="0" width="100%" height="100%" cellspacing="0" cellpadding="2">
-                  
-                  <tr>
-    
-                    <td class="main" colspan="2">Ha elfelejtett jelszavát, adja meg az e-mail címét és küldünk egy új jelszót<br />.</td>
-                  </tr>
-                  
-                  <tr>
-                    <td class="main"><label>E-Mail cím:</label> <input type="text" name="forgot_email" value="{$email}" /></td>
-    
-                  </tr>
-                  
-                </table></td>
-              </tr>
-            </table></td>
-          </tr>
-           <tr>
-            <td><table border="0" width="100%" cellspacing="1" cellpadding="2" class="infoBox">
-              <tr class="infoBoxContents">
-                <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
-                  <tr>
-                    <td align="right">
-                      <div class="submit">
-                        <input type="submit" value="Folytatás" style="float: none; margin-left: 448px;" />
-                      </div>
-                    </td>
-                  </tr>
-                </table></td>
-              </tr>
-            </table></td>
-          </tr>
-        </table>
-        <input type="hidden" name="doforgot" value="1" />
-    </form>
-  </div>
-<div class="registrationPageBottom">&nbsp;</div>
+    <div class="password_forgotten_page">
+        <form name="password_forgotten" class="password_forgotten" action="{$forgotFilename}" method="post">
+            <h2>Elfelejtettem a jelszavam !</h2>
+            <p>Ha elfelejtette jelszavát, adja meg az e-mail címét és küldünk egy új jelszót<br />.</p>
+            <div class="main"><input type="text" name="forgot_email" value="{$email}" placeholder="E-mail cím"/></div>
+              <div class="submit">
+                <input type="submit" value="Folytatás"/>
+              </div>
+              <input type="hidden" name="doforgot" value="1" />
+        </form>
+    </div>
 </div>
+<div class="registrationPageBottom">&nbsp;</div>
+
+
 
  
 

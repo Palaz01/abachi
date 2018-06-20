@@ -64,7 +64,7 @@
               </div>
             </div>
 
-{assign var='pagerEntity' value='termék'}
+          {assign var='pagerEntity' value='termék'}
 
 
 

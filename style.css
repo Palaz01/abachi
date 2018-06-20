@@ -1173,6 +1173,13 @@ p {line-height: 18px;}
 
 
 /*----------NEWS VIEW PAGE START----------*/
+.news_view_page {
+    background: #fff;
+    border: solid 1px #bab293;
+    margin-bottom: 40px;
+}
+
+
 .news_view_page .repeat {
     position: relative;
     padding: 20px 15px;
@@ -1363,7 +1370,6 @@ p {line-height: 18px;}
 .registration_page p {
     color: #393939;
     float: left;
-    width: 160px;
     margin-right: 10px;
 }
 
@@ -1634,7 +1640,7 @@ p {line-height: 18px;}
 
 .product_item .manufacturer p {
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 3px;o
 }
 
 .product_item .manufacturer a {
@@ -1682,9 +1688,7 @@ p {line-height: 18px;}
     background: #505050;
 }
 
-.product_list_page .bottom {
-    display: none;
-}
+
 
 
 /*.product_list_page .product, .product_list_page .manufacturer, .product_list_page .price, .product_list_page .buy {
@@ -3075,4 +3079,57 @@ p {line-height: 18px;}
     background: #505050;
     border-color: #505050;
 }
+
+/* PASSWORD FORGOTTEN */
+
+.password_forgotten_page {
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+}
+
+.password_forgotten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.password_forgotten h2 {
+    margin-bottom: 21px;
+}
+
+.password_forgotten p {
+    font-size: 13px;
+    color: #b9632d;
+    font-weight: bold !important;
+    margin-right: 0;
+    margin-bottom: 21px;
+    text-align: center;
+}
+
+.password_forgotten input[type="text"]{
+    width: 310px;
+    padding: 13px 10px;
+    border: solid 1px #bab293;
+    margin: 0;
+}
+
+.password_forgotten input[type="submit"]{
+    min-width: 330px;
+    padding: 13px 10px;
+    background: #383838;
+    border: 1px solid #383838;
+    color: #fff;
+}
+
+.password_forgotten input[type="submit"]:hover {
+    background: #505050;
+    border-color: #505050;
+}
+
+
+
+
 
