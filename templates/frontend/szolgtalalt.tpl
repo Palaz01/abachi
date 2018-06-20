@@ -1,5 +1,7 @@
        <div class="news_list_page">
-          <div class="top"><h2>Talált szolgáltatások</h2></div>
+          <div class="top">
+              <h2>Talált szolgáltatások</h2>
+          </div>
            {if ($tszol!="X")}
           <div class="repeat">
 {foreach name=articles from=$tszol item=article}    

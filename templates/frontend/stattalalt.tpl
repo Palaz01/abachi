@@ -1,5 +1,8 @@
        <div class="news_list_page">
-          <div class="top"><h2>Talált aloldalak</h2></div>
+          <div class="top">
+            <h2>Talált aloldalak</h2>
+            <div class="vodor"></div>
+          </div>
            {if ($tstat!="X")}
           <div class="repeat">
 {foreach name=articles from=$tstat item=article}    

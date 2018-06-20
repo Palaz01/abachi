@@ -6,6 +6,9 @@
             {else}
               <h2>{if !isset($categoryData)}Terméklista{else}{$categoryData.title}{/if}</h2>
             {/if}
+              <div class="vodor">
+                  <img src="templates/images/dezsa.png" alt="Vödör">
+              </div>
           </div>
           
           <div class="container">

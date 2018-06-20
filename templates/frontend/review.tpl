@@ -7,16 +7,46 @@
      <input type="hidden" name="action" value="process">
 
         <div class="cart_page">
-          <div class="top"><h2>Kosár</h2></div>
+          <div class="top">
+              <h2>Kosár</h2>
+              <div class="vodor">
+                  <img src="templates/images/dezsa.png" alt="Vödör">
+              </div>
+          </div>
 
           
           <div class="container">
 		  <div class="links">
-		    <a href="{$cartFilename}" title="" id="link1" >1. KOSÁR</a>
-		    <a href="{$vcim}" title="" id="link2">2. CÍM</a>
-		    <a href="{$vszall}" title="" id="link3">3. SZÁLLÍTÁS</a>
-		    <a href="{$vfiz}" title="" id="link4">4. FIZETÉS</a>
-		    <a href="#" title="" class="active" id="link5">5. RENDELÉS</a>
+		    <a href="{$cartFilename}" title="" id="link1" >
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/cart.svg" alt="cart">
+                </div>
+                <span>KOSÁR</span>
+            </a>
+		    <a href="{$vcim}" title="" id="link2">
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/truck.svg" alt="truck">
+                </div>
+                <span>CÍM</span>
+            </a>
+		    <a href="{$vszall}" title="" id="link3">
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/home.svg" alt="home">
+                </div>
+                <span>SZÁLLÍTÁS</span>
+            </a>
+		    <a href="{$vfiz}" title="" id="link4">
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/credit-card.svg" alt="credit-card">
+                </div>
+                <span>FIZETÉS</span>
+            </a>
+		    <a href="#" title="" class="active" id="link5">
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/checked-white.svg" alt="checked">
+                </div>
+                <span>RENDELÉS</span>
+            </a>
 
 		    <br class="clear" />
 		  </div>

@@ -333,6 +333,14 @@ p {line-height: 18px;}
     height: 96px;
     background-color: #ffe9ac;
     border: solid 1px #8c3500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_menu .logo img {
+    width: 80%;
+    height: auto;
 }
 
 
@@ -465,6 +473,17 @@ p {line-height: 18px;}
 .left_menu .left_menu_item {
     display: flex;
     justify-content: space-between;
+}
+
+.left_menu .toggle_item img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.left_menu .toggle_item span {
+    display: flex;
+    align-items: center;
 }
 
 .toggle_item_open {
@@ -1036,11 +1055,22 @@ p {line-height: 18px;}
     display: none;
 }
 
+.top {
+    position: relative;
+}
+
 
 .vodor {
     position: absolute;
-    right: 5px;  bottom: 5px;
-    width: 72px;  height: 86px;
+    right: 40px;
+    bottom: 3px;
+    width: 90px;
+    height: 85px;
+}
+
+.vodor img {
+    width: 100%;
+    height: auto;
 }
 
 .ful {
@@ -2189,6 +2219,15 @@ p {line-height: 18px;}
     height: 100px;
     border: solid 2px #5a3512;
     margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart_status_icon img {
+    max-height: 41px;
+    max-width: 57px;
+    width: auto;
 }
 
 .cart_page .item {
@@ -2941,6 +2980,14 @@ p {line-height: 18px;}
     background-color: #ffe9ac;
     border: solid 1px #8c3500;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_page .contact_abachi_logo img {
+    width: 100%;
+    height: auto;
 }
 
 .contact_page .divide {
@@ -3059,12 +3106,42 @@ p {line-height: 18px;}
     width: 20px;
     height: 20px;
     border: solid 1px #bab293;
-    margin-right: 10px;
+    opacity: 0;
+
 }
+
+.contact_page .form .custom_checkbox {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #bab293;
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 0;
+}
+
+.contact_page .form .custom_checkbox img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.contact_page .form .custom_checkbox.checked img {
+    display: block;
+}
+
+
 
 .contact_page .form .accept p {
     font-size: 13px;
     color: #5a3512;
+    padding-left: 15px;
+    text-align: left;
+    max-width: 290px;
+    margin-left: 0;
 }
 
 .contact_page .form .submit input[type="submit"] {

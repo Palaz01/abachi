@@ -12,7 +12,7 @@
                 </div>
                 <div class="our_contacts">
                     <div class="contact_abachi_logo">
-                        <img src="" alt="">
+                        <img src="templates/images/Logo.svg" alt="Abachi logo">
                     </div>
                     <strong>Abachi Wellness Kft.</strong>
                     <p>Adószám: 24316316-2-13</p>
@@ -51,7 +51,10 @@
 
                   <div class="submit">
                       <div class="accept flex">
-                          <input type="checkbox">
+                          <div class="custom_checkbox">
+                              <img src="templates/images/checked.svg" alt="">
+                          </div>
+                          <input type="checkbox" class="checkbox">
                           <p>Elfogadom az adatvédelemre és az adatkezelésre vonatkozó szabályokat. </p>
                       </div>
                       <input type="submit" value="ELKÜLDÉS" />

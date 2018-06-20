@@ -1,5 +1,10 @@
        <div class="news_list_page">
-          <div class="top"><h2>Szolgáltatásaink</h2></div>
+          <div class="top">
+              <h2>Szolgáltatásaink</h2>
+              <div class="vodor">
+                  <img src="templates/images/dezsa.png" alt="Vödör">
+              </div>
+          </div>
           
           <div class="repeat">
 {foreach name=articles from=$articlesz item=article}    

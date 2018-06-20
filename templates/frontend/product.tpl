@@ -4,7 +4,7 @@
           
           <div class="top">
             <h2>{$data.title}</h2>
-            <div class="ful"></div>
+            <div class="vodor"></div>
           </div>
           <div class="container">
             <div class="product">

@@ -2,8 +2,12 @@
 
 
  <div class="new_stuff_box">
-          <h2 class="title">SZAUNA AKCIÓ, ÚJDONSÁGOK</h2>
-          
+          <div class="top">
+            <h2 class="title">SZAUNA AKCIÓ, ÚJDONSÁGOK</h2>
+            <div class="vodor">
+                <img src="templates/images/dezsa.png" alt="Vödör">
+            </div>
+          </div>
           <div class="container">
           
           

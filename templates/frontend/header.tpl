@@ -46,7 +46,9 @@
   <!--main menu starts here-->
   <div id="main_menu">
     <div class="main-menu-wrapper">
-      <div class="logo"></div>
+      <a href="{$mainFilename}" class="logo">
+        <img src="templates/images/Logo.svg" alt="Abachi logo">
+      </a>
       <ul class="main-menu-items">
         <li class="highlighted-menu"><a href="/" title="Egyedi szaunák">Egyedi szaunák</a></li>
         <li class="firstLevelMenu">
@@ -149,7 +151,7 @@
         <div class="left_menu">
           <ul>
             <li>
-              <a  title="Keresés" class="toggle_item"><span>Keresés</span> <i class="fa fa-chevron-down"></i></a>
+              <a  title="Keresés" class="toggle_item"><span><img src="templates/images/search.svg" alt="search"> Keresés</span> <i class="fa fa-chevron-down"></i></a>
               <div class="detailed_search_box toggle_content">
                 <form name="advanced_search2" action="{$searchResultsFilename}" method="post">
                   <div>

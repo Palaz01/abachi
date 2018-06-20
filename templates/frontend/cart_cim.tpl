@@ -10,29 +10,41 @@
         <div class="cart_page">
           <div class="top">
             <h2>Kosár</h2>
-            <div class="vodor"></div>  
+              <div class="vodor">
+                  <img src="templates/images/dezsa.png" alt="Vödör">
+              </div>
           </div>
 
           
           <div class="container">
             <div class="links">
               <a href="{$cartFilename}" title="" id="link1">
-                <div class="cart_status_icon"></div>
+                <div class="cart_status_icon">
+                    <img class="icon" src="templates/images/cart.svg" alt="cart">
+                </div>
                 <span>KOSÁR</span>
               </a>
               <a title="" id="link2" class="active">
-                  <div class="cart_status_icon"></div>
+                  <div class="cart_status_icon">
+                      <img class="icon" src="templates/images/truck-white.svg" alt="truck">
+                  </div>
                   <span>CÍM</span>
               </a>
               <a href="{$vszall}" title="" id="link3">
-                  <div class="cart_status_icon"></div>
+                  <div class="cart_status_icon">
+                      <img class="icon" src="templates/images/home.svg" alt="home">
+                  </div>
                   <span>SZÁLLÍTÁS</span>
               <a href="{$vfiz}" title="" id="link4">
-                  <div class="cart_status_icon"></div>
+                  <div class="cart_status_icon">
+                      <img class="icon" src="templates/images/credit-card.svg" alt="credit-card">
+                  </div>
                   <span>FIZETÉS</span>
               </a>
               <a href="javascript:void(0)" title="" onclick="document.review.submit();" id="link5">
-                  <div class="cart_status_icon"></div>
+                  <div class="cart_status_icon">
+                      <img class="icon" src="templates/images/checked.svg" alt="checked">
+                  </div>
                   <span>RENDELÉS</span>
               </a>
 

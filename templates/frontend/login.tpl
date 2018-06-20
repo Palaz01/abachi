@@ -2,6 +2,7 @@
 <div class="static_page">
           <div class="top">
             <h2>Belépés</h2>
+            <div class="vodor"></div>
           </div>
 <div class="repeat">
     <form name="login" action="{$loginFilename}" method="post">

@@ -182,6 +182,12 @@ $(document).ready(function(){
     $(this).children('.fa').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
     $(this).toggleClass('toggle_item_open');
   });
+
+  // Custom checkbox
+
+  $('.checkbox').on('click', function(){
+    $('.custom_checkbox').toggleClass('checked');
+  });
    
 });
 

@@ -4,6 +4,7 @@
 <div class="static_page" id="user_data_page">
   <div class="top">
     <h2>Saját fiók információi</h2>
+    <div class="vodor"></div>
   </div>
   
   <div class="repeat">

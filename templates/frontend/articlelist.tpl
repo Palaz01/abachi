@@ -1,7 +1,12 @@
 {include file='header.tpl'}
 
         <div class="news_list_page">
-          <div class="top"><h2>Hasznos tudnivalók</h2></div>
+          <div class="top">
+              <h2>Hasznos tudnivalók</h2>
+              <div class="vodor">
+                  <img src="templates/images/dezsa.png" alt="Vödör">
+              </div>
+          </div>
           
           <div class="repeat">
 {foreach name=articles from=$articles item=article}    

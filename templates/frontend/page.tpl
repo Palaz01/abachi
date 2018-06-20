@@ -2,6 +2,9 @@
 <div class="static_page">
   <div class="top">
     <h2>{$data.title}</h2>
+    <div class="vodor">
+      <img src="templates/images/dezsa.png" alt="Vödör">
+    </div>
   </div>
   
   <div class="repeat">
