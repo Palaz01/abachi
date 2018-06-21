@@ -188,6 +188,49 @@ $(document).ready(function(){
   $('.checkbox').on('click', function(){
     $('.custom_checkbox').toggleClass('checked');
   });
+
+
+
+    function customQuantity() {
+        /** Custom Input number increment js **/
+        $(
+            '<div class="pt_QuantityNav"><div class="pt_QuantityButton pt_QuantityUp"><i class="fa fa-chevron-up"></i></div><div class="pt_QuantityButton pt_QuantityDown"><i class="fa fa-chevron-down"></i></div></div>'
+        ).insertAfter(".pt_Quantity input");
+
+        $(".pt_Quantity").each(function() {
+            var spinner = $(this),
+                input = spinner.find('input[type="number"]'),
+                btnUp = spinner.find(".pt_QuantityUp"),
+                btnDown = spinner.find(".pt_QuantityDown"),
+                min = input.attr("min"),
+                max = input.attr("max"),
+                valOfAmout = input.val(),
+                newVal = 0;
+
+            btnUp.on("click", function() {
+                var oldValue = parseFloat(input.val());
+
+                if (oldValue >= max) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+            btnDown.on("click", function() {
+                var oldValue = parseFloat(input.val());
+                if (oldValue <= min) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+        });
+    }
+    customQuantity();
    
 });
 

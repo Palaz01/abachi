@@ -41,11 +41,14 @@
 	  {assign var='trCRészösszeg: lass' value='productListing-even'}	
 	  {if $smarty.foreach.cart.index%2==0}{assign var='trClass' value='productListing-odd'}{/if} 
                       <tr>
-                        <td class="prod_name"><a href="{$row.filename}">{$row.title}</a></td>
+                        <td class="prod_name">
+                            <input type="submit" value="" class="submit" onclick="getElementById('basketQuantity[{$key}]').value='0'; submitForm('refresh'); "/>
+                            <a href="{$row.filename}">{$row.title}</a>
+                        </td>
                         <td class="price">{$row.pricewithvat|commify:-1:',':'.'} Ft</td>
                         <td class="quantity">
                           <input type="text" id="basketQuantity[{$key}]" name="basketQuantity[{$key}]" maxlength="3" size="4" value="{$row.quantity}" />
-                          <input type="submit" value="" class="submit" onclick="getElementById('basketQuantity[{$key}]').value='0'; submitForm('refresh'); "/>
+
                         </td>
                         <td class="overall">{$row.sumwithvat|commify:-1:',':'.'} Ft</td>
                       </tr>

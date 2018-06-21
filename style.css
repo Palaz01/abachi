@@ -1341,11 +1341,7 @@ p {line-height: 18px;}
     width: 338px;  height: 22px;  line-height: 22px;
 }
 
-.static_page .form .submit input {
-    float: right;
-    padding: 0;
-    width: 104px;  height: 29px;
-}
+
 
 .static_page .form .textarea {height: 155px;}
 
@@ -2238,6 +2234,148 @@ p {line-height: 18px;}
     padding: 0 30px;
 }
 
+.cart_page .item .bg .prod_name a {
+    text-decoration: none;
+    font-weight: normal;
+    color: #c06d32;
+}
+
+.cart_page .item .bg .prod_name input {
+    background-color: transparent;
+    border: none;
+    color: #842b09;
+    margin-right: 18px;
+}
+
+.cart_page .item .cart_table_header,
+.cart_page .item .cart_table_row {
+    border-bottom: 1px solid #bab293;
+}
+
+.cart_page .item table td.price,
+.cart_page .item table td.quantity,
+.cart_page .item table td.overall {
+    color: #5a3512;
+    font-weight: normal;
+}
+
+.cart_page .item table td.quantity input {
+    max-width: 40px;
+}
+
+
+.quantity input[type="number"]::-webkit-inner-spin-button, .body input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity .pt_Quantity {
+    display: inline-block;
+    margin: 0 0 10px;
+    position: relative;
+}
+.quantity .pt_Quantity input {
+    color: #443017;
+    background-color: #ffffff;
+    border: solid 1px #bab293;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    width: 35px;
+    height: 30px;
+    float: left;
+    display: block;
+    padding: 0 15px 0 2px;
+    margin: 0;
+    text-align: center;
+    width: 70px;
+}
+.quantity .pt_Quantity input:focus {
+    outline: 0;
+}
+.quantity .pt_Quantity .pt_QuantityNav {
+    float: left;
+    position: relative;
+    height: 31px;
+}
+.quantity .pt_Quantity .pt_QuantityNav .pt_QuantityButton {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #b7b7b7;
+    width: 15px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 1.1;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.quantity .pt_Quantity .pt_QuantityNav .pt_QuantityButton i {
+    font-size: 10px;
+    color: #bab293;
+}
+
+.quantity .pt_Quantity .pt_QuantityNav .pt_QuantityButton:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.quantity .pt_Quantity .pt_QuantityNav .pt_QuantityButton.pt_QuantityUp {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    border-bottom: 1px solid #b7b7b7;
+}
+.quantity .pt_Quantity .pt_QuantityNav .pt_QuantityButton.pt_QuantityDown {
+    position: absolute;
+    bottom: 0px;
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .cart_page .reg_or_login_text {
     font-size: 13px;
     font-weight: normal;
@@ -2452,7 +2590,6 @@ p {line-height: 18px;}
 
 .cart_page .quantity .submit {
     width: 12px;  height: 18px;
-    background: url(images/dustbin.gif) no-repeat;
     border: 0;
     margin: 0;
 }
@@ -3097,12 +3234,12 @@ p {line-height: 18px;}
     width: calc(50% - 30px);
 }
 
-.contact_page .form .accept {
+.accept {
     margin-bottom: 10px !important;
     margin-top: 10px !important;
 }
 
-.contact_page .form .accept input {
+.accept input {
     width: 20px;
     height: 20px;
     border: solid 1px #bab293;
@@ -3110,7 +3247,7 @@ p {line-height: 18px;}
 
 }
 
-.contact_page .form .custom_checkbox {
+.accept .custom_checkbox {
     width: 14px;
     height: 14px;
     border: 1px solid #bab293;
@@ -3123,19 +3260,19 @@ p {line-height: 18px;}
     z-index: 0;
 }
 
-.contact_page .form .custom_checkbox img {
+.accept .custom_checkbox img {
     width: 100%;
     height: auto;
     display: none;
 }
 
-.contact_page .form .custom_checkbox.checked img {
+.accept .custom_checkbox.checked img {
     display: block;
 }
 
 
 
-.contact_page .form .accept p {
+.accept p {
     font-size: 13px;
     color: #5a3512;
     padding-left: 15px;
@@ -3206,6 +3343,55 @@ p {line-height: 18px;}
     border-color: #505050;
 }
 
+/* HÍRLEVÉL */
+
+.hirlevel_page {
+    margin-bottom: 40px !important;
+}
+
+.hirlevel_title p{
+    text-align: center;
+    color: #ba642d !important;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.hirlevel {
+    width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.hirlevel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hirlevel form div {
+    display: flex;
+}
+
+.hirlevel input[type="text"] {
+    padding: 13px 10px;
+    border: solid 1px #bab293;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.hirlevel input[type="submit"]{
+    padding: 13px 10px;
+    width: 100%;
+    color: #fff;
+    background-color: #383838;
+}
+
+.hirlevel input[type="submit"]:hover{
+    background: #505050;
+}
 
 
 

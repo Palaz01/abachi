@@ -221,7 +221,7 @@
             <li><a href="{$registerFilename}" title="Regisztráció" class="left_menu_item">Regisztráció</a></li>
             <li><a href="{$pgDeliveryFilename}" title="Szállítás" class="left_menu_item">Szállítás</a></li>
             <li><a href="{$articleListFilename}" title="Tudnivalók" class="left_menu_item">Tudnivalók</a></li>
-            <li><a href="#" title="Hírlevél feliratkozás" class="left_menu_item">Hírlevél feliratkozás</a></li>
+            <li><a href="{$hirlevel}" title="Hírlevél feliratkozás" class="left_menu_item">Hírlevél feliratkozás</a></li>
             <li><a href="{$contactFilename}" title="Kapcsolat" class="left_menu_item">Kapcsolat</a></li>
             <li><a href="#" title="Elérhetőségek" class="left_menu_item">Elérhetőségek</a></li>
           </ul>
