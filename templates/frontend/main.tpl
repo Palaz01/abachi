@@ -14,7 +14,7 @@
             {if sizeof($productsOnMainpage)>2}
             <div class="item">
             {else}
-            <div class="item nomargin noborder">
+            <div class="item noborder">
             {/if}
           
           {foreach from=$productsOnMainpage item=row name=main}
@@ -42,14 +42,13 @@
               </div>
               
               {if ($smarty.foreach.main.index+1)%2==0}
-              
-                <br class="clear" />
+
                 </div>
                 
                 {if $smarty.foreach.main.index+1<sizeof($productsOnMainpage)-2}
                   <div class="item">
                 {else}
-                  <div class="item nomargin noborder">
+                  <div class="item noborder">
                 {/if}               
               
               {/if}
@@ -57,8 +56,7 @@
 
 
            {/foreach}
-           
-           <br class="clear" /> 
+
            </div>
                     
           </div>

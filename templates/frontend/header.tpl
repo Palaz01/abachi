@@ -49,6 +49,9 @@
       <a href="{$mainFilename}" class="logo">
         <img src="templates/images/Logo.svg" alt="Abachi logo">
       </a>
+      <button id="mobile_menu_button">
+        <i class="fa fa-bars"></i>
+      </button>
       <ul class="main-menu-items">
         <li class="highlighted-menu"><a href="/" title="Egyedi szaunák">Egyedi szaunák</a></li>
         <li class="firstLevelMenu">

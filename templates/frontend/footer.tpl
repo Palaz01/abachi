@@ -5,7 +5,7 @@
           <div class="container">
 
  {foreach name=articles from=$articles item=article}
-            <div class="item nomargin" style="padding-top:5px; margin-top:5px;">
+            <div class="item">
 
               <div class="news_box_image">
               {if $article.image!=false}
@@ -20,9 +20,7 @@
                 <p><b>{$article.intro|nl2br}</b></p>
                 
                 <a href="{$article.filename}.html" title="{$article.moretitle}" class="more">{$article.morelink}</a>
-                <br class="clear" />
               </div>
-              <br class="clear" />
             </div>
             {/foreach}	
             
