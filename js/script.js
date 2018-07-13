@@ -231,6 +231,7 @@ $(document).ready(function(){
         });
     }
     customQuantity();
+
    
 });
 

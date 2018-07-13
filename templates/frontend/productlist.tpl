@@ -28,7 +28,7 @@
 
                   <div class="product_item" {$trClass}>
                     <div class="image">
-                        <a href="{$product.filename}.html"><img src="{#pt#}{$product.image}&w=119" width="119" border="0" alt="{$product.imgalt}" title="{$product.imgtitle}"></a>
+                        <a href="{$product.filename}.html"><img src="{#pt#}{$product.image}&w=420" width="420" border="0" alt="{$product.imgalt}" title="{$product.imgtitle}"></a>
                     </div>
                     <div>
                         <div class="product">

@@ -21,7 +21,7 @@
             
               <div class="product">
                 <div class="product-image-box">
-                    <img src="{#pt#}{$row.image}&amp;w=123&amp;h=128&amp;far=1" alt="{$row.imgalt}" title="{$row.imgtitle}" />
+                    <img src="{#pt#}{$row.image}&amp;w=432&amp;far=1" alt="{$row.imgalt}" title="{$row.imgtitle}" />
                 </div>
                   <div class="text_container">
                   <h2><a href="{$row.filename}.html" title="">{$row.title}</a></h2>

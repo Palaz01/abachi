@@ -6,15 +6,17 @@
 
  {foreach name=articles from=$articles item=article}
             <div class="item nomargin" style="padding-top:5px; margin-top:5px;">
-              <h2><a href="{$article.filename}.html" title="">{$article.title}</a></h2>
-              <p class="date">{$article.artdate}</p>
+
+              <div class="news_box_image">
               {if $article.image!=false}
-              <img src="{#pt#}{$article.image}&amp;w=123" width="123" alt="{$article.imgalt}" title="{$article.imgtitle}" />
+              <img src="{#pt#}{$article.image}&amp;w=140" width="140" alt="{$article.imgalt}" title="{$article.imgtitle}" />
 {else}
               <img src="images/pic1.gif" alt="" title="" />              
 {/if}
-
+              </div>
               <div class="text_container">
+                <h2><a href="{$article.filename}.html" title="">{$article.title}</a></h2>
+                <p class="date">{$article.artdate}</p>
                 <p><b>{$article.intro|nl2br}</b></p>
                 
                 <a href="{$article.filename}.html" title="{$article.moretitle}" class="more">{$article.morelink}</a>

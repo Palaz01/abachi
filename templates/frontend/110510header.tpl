@@ -7,6 +7,7 @@
   <meta name="description" content="{$metaDescription}" />
   <meta name="keywords" content="{$metaKeywords}" />
   <meta name="google-site-verification" content="KytVwp3TMxkxMavrauh5jSXdPnORAPLmnMxE373q9Fk" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1″ />
   {if $tinyMce}
   <script type="text/javascript" src="inc/tinymce/tiny_mce.js"></script>
   <script type="text/javascript" src="js/frontend-mce.js"></script>

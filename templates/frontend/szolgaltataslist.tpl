@@ -10,16 +10,17 @@
 {foreach name=articles from=$articlesz item=article}    
 
             <div class="item{if $smarty.foreach.articles.last} last{/if}">
-              <h2><a href="{$article.filename}.html">{$article.title}</a></h2>
+
               
 	{if $article.image!=false}
-        <a href="{$article.filename}.html"><img src="{#pt#}{$article.image}&w=123" width="123" alt="{$article.imgalt}" title="{$article.imgtitle}" /></a>
+        <a href="{$article.filename}.html" class="news_list_image"><img src="{#pt#}{$article.image}&w=140" width="140" alt="{$article.imgalt}" title="{$article.imgtitle}" /></a>
  {else}
-              <a href="{$article.filename}.html"><img src="images/pic2.gif" alt="" width="123" height="123" title="" /></a>
+              <a href="{$article.filename}.html" class="news_list_image"><img src="images/pic2.gif" alt="" width="140" title="" /></a>
 {/if}			  							
 
               
               <div class="text_container">
+                <h2><a href="{$article.filename}.html">{$article.title}</a></h2>
                 <p><b>{$article.intro|nl2br}</b></p>
                 
                 <a href="{$article.filename}.html" title="{$article.moretitle}" class="more">{$article.morelink}</a>

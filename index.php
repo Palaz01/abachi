@@ -1,5 +1,6 @@
 <?php
-//phpinfo();exit;
+
+
 /*
 CREATE TABLE `mainpagebox` (`id` int( 11 ) unsigned NOT NULL AUTO_INCREMENT ,
 `image` varchar( 32 ) CHARACTER SET ascii NOT NULL ,
@@ -34,7 +35,8 @@ PRIMARY KEY ( `id` ) ,
 KEY `pageid_index` ( `pageid` ) 
 ) ENGINE = MYISAM DEFAULT CHARSET = utf8 COLLATE = utf8_hungarian_ci;
 */
-
+error_reporting(E_ALL);
+ini_set("display_errors", 255);
 DEFINE ('OBSERVATION_PAGELIMIT', 10);
 
 include ('./includes.php');

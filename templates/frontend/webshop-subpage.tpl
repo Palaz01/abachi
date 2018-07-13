@@ -19,9 +19,10 @@
           {foreach from=$productsOnMainpage item=row name=main}
             
               <div class="product">
-                <img src="{#pt#}{$row.image}&amp;w=123&amp;h=128&amp;far=1" width="123" height="128" alt="{$row.imgalt}" title="{$row.imgtitle}" />
-                
-                <div class="text_container">
+                 <div class="product-image-box">
+                    <img src="{#pt#}{$row.image}&amp;w=432&amp;far=1" width="432" alt="{$row.imgalt}" title="{$row.imgtitle}" />
+                 </div>
+                  <div class="text_container">
                   <div>
                       <h2><a href="{$row.filename}.html" title="">{$row.title}</a></h2>
 

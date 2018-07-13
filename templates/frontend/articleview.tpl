@@ -10,10 +10,11 @@
               <a href="#" title="" class="print"></a>
               <a href="#" title="" class="email"></a>
             </div>
+            <div class="news-view-image">
             {if $data.image}
               <img src="{#pt#}{$data.image}&w=265" width="265" alt="{$data.imgalt}" title="{$data.imgtitle}" class="first"/>
             {/if}
-                        
+            </div>
             <p class="date">{$data.artdate}</p>
             
             <p>
