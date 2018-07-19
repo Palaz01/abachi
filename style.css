@@ -146,7 +146,8 @@ p {line-height: 18px;}
 .headerImgPager {
     margin: 0 auto;
     position: relative;
-    height: 496px;
+    height: 500px;
+    overflow: hidden;
 }
 
 .headerImgPager .container {
@@ -341,6 +342,10 @@ p {line-height: 18px;}
     height: auto;
 }
 
+#mobile_menu_button {
+    display: none;
+}
+
 
 .main-menu-wrapper {
     display: flex;
@@ -358,9 +363,6 @@ p {line-height: 18px;}
     white-space: nowrap;
 }
 
-#main_menu .main-menu-items {
-    height: 55px;
-}
 
 #main_menu li {
     float: left;
@@ -447,6 +449,82 @@ p {line-height: 18px;}
     color: #fff;
 }
 
+#mobile_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 10;
+}
+
+#mobile_menu .mobile-menu-header {
+    width: 100%;
+    min-height: 270px;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mobile-menu-header .contact_box {
+    text-align: center;
+}
+
+.mobile-menu-header .contact_box h3 {
+    font-size: 28px;
+    color: #b9632d;
+    margin-bottom: 10px;
+}
+
+.mobile-menu-header .contact_box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.mobile-menu-header .contact_box p:first-child {
+    margin-bottom: 15px;
+}
+
+.mobile-menu-header .contact_box p span {
+    color: #b9632d;
+}
+
+.mobile-menu-header #close_nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    outline: none !important;
+}
+
+
+
+.mobile-menu-header #close_nav i {
+    color: #fff;
+    font-size: 2em;
+}
+
+
+.mobile-menu-items li  {
+    padding: 32px 30px;
+    background: #c06d32;
+    border-bottom: 1px solid #c89a70;
+    color: #fff;
+}
+
+.mobile-menu-items li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+}
+
 
 #main #left_column, #main #right_column {float: left;}
 
@@ -472,7 +550,7 @@ p {line-height: 18px;}
     background: #c06d32;
 }
 
-.left_menu .toggle_item,
+.toggle_item,
 .left_menu .left_menu_item {
     display: flex;
     justify-content: space-between;
@@ -484,7 +562,7 @@ p {line-height: 18px;}
     margin-right: 10px;
 }
 
-.left_menu .toggle_item span {
+.toggle_item span {
     display: flex;
     align-items: center;
 }
@@ -3513,6 +3591,7 @@ MEDIA QUERIES
         border: none;
         background: none;
         margin-right: 30px;
+        display: block;
     }
 
     #mobile_menu_button:active,

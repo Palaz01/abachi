@@ -52,6 +52,8 @@
       <button id="mobile_menu_button">
         <i class="fa fa-bars"></i>
       </button>
+
+      <!--Desktop navigation-->
       <ul class="main-menu-items">
         <li class="highlighted-menu"><a href="/" title="Egyedi szaunák">Egyedi szaunák</a></li>
         <li class="firstLevelMenu">
@@ -81,9 +83,60 @@
         <li class="nobg"><a href="{$cartFilename}" title="" id="main_menu7" class="cart_menu">Kosár tartalma</a></li>
         -->
       </ul>
+
+
+
     </div>
   </div>
   <!--main menu ends here-->
+
+  <!--Mobile-menu-->
+  <div id="mobile_menu">
+    <div class="mobile-menu-header">
+      <div class="contact_box">
+        <h3>Abachi wellness Kft.</h3>
+        <p>Szauna és szaunakellékek</p>
+        <br>
+        <p><span>Cím: </span>2100 Gödöllő, Dózsa György 69 Berger udvar.</p>
+        <p><span>Telefon: </span>+36703355049</p>
+        <p><span>E-mail: </span>info@abachiszauna.hu</p>
+      </div>
+      <button id="close_nav"><i class="fa fa-times"></i></button>
+      <!-- This is an editor field, and its content is useless for the design!!! -->
+      <!--<div class="contact_box">
+        {$elerszoveg}
+      </div>-->
+    </div>
+    <ul class="mobile-menu-items">
+      <li class="highlighted-menu"><a href="/" title="Egyedi szaunák">Egyedi szaunák</a></li>
+      <li class="firstLevelMenu">
+        <a href="#" title="Szauna galéria" class="toggle_item"><span>Szauna galéria</span><span class="fa fa-chevron-down"></span></a>
+        <ul class="submenu">
+          {foreach from=$topFixCategories item=topfix name=tfmf}
+            <li>
+              <a href="{$topfix.filename}{#ext#}" title="{$topfix.title}">{$topfix.title}</a>{if !$smarty.foreach.tfmf.last}{/if}
+            </li>
+          {/foreach}
+        </ul>
+      </li>
+      <li><a href="{$szolg}" title="Szauna szolgáltatásaink">Szauna szolgáltatásaink</a></li>
+      <li><a href="{$cegbemutato}" title="Bemutatóterem">Bemutatóterem</a></li>
+      <li>
+        <a href="{$webshopFilename}" title="Szauna termékek">Szauna termékek</a>
+      </li>
+      <!--<li><a href="{$discountFilename}" title="Újdonságok">Újdonságok</a></li>
+        <li><a href="{$webshopFilename}" title="Webshop">Webshop</a></li>-->
+
+      <!--
+        <li><a href="{$searchFilename}" title="" id="main_menu2">Keresés</a></li>
+        <li><a href="{$cegbemutato}" title="" id="main_menu3">Cégbemutató</a></li>
+        <li><a href="{$pgDeliveryFilename}" title="" id="main_menu4">Szállítás</a></li>
+        <li><a href="{$contactFilename}" title="" id="main_menu5">Kapcsolat</a></li>
+        <li><a href="{$registerFilename}" title="" id="main_menu6">Regisztráció</a></li>
+        <li class="nobg"><a href="{$cartFilename}" title="" id="main_menu7" class="cart_menu">Kosár tartalma</a></li>
+        -->
+    </ul>
+  </div>
 
 
   {if isset($mainpageboxes)&&sizeof($mainpageboxes)!=0}
@@ -103,7 +156,7 @@
     <!--header img pager starts here-->
     <div class="headerImgPager">
       {foreach from=$mainpageboxes item=box name=mpbi}
-      <img {if $smarty.foreach.mpbi.first}class="first"{/if} src="{#pt#}upload/mainpagebox/{$box.image}&amp;w=951&amp;h=469&amp;zc=1" alt="" title="" width="951" height="496" />
+      <img {if $smarty.foreach.mpbi.first}class="first"{/if} src="{#pt#}upload/mainpagebox/{$box.image}&amp;w=1200&amp;h=500&amp;zc=1" alt="" title="" width="1200" height="500" />
       {/foreach}
 
       <div class="slider_text">
@@ -229,7 +282,51 @@
                 <a href="{$modifyFilename}" class="orangeLink">Adataim</a>
                     <a href="{$previousordersFilename}" class="orangeLink">Rendeléseim</a>
                 <a href="{$logoutFilename}" class="greyLink">Kilépés</a>
-                {/if}
+                {/if}<li>
+              <a  title="Keresés" class="toggle_item"><span><img src="templates/images/search.svg" alt="search"> Keresés</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="detailed_search_box toggle_content">
+                <form name="advanced_search2" action="{$searchResultsFilename}" method="post">
+                  <div>
+                    <input type="text" placeholder="Keresett szöveg (terméknév)" name="searchpattern" id="kszoveg"/>
+                  </div>
+                  <div>
+                    <select name="manufacturer" id="gyarto">
+                      {html_options options=$manufacturersAvaiable}
+                    </select>
+                  </div>
+
+                  <div>
+                    <select name="categories[]" id="termek">
+                      {html_options options=$categoriesAvailable}
+                    </select>
+                  </div>
+                  <div class="input-group">
+                      <input type="text" value="Ár min" name="searchpattern" id="kszoveg" placeholder="Ár min."/>
+                      <input type="text" value="Ár max" name="searchpattern" id="kszoveg" placeholder="Ár max"/>
+                  </div>
+                  <div class="submit">
+                    <input type="hidden" name="dosearch" value="Keresés" />
+                    <input type="submit" value="KERESÉS" />
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li>
+              <a title="Szauna termékek" class="toggle_item"><span>Szauna termékek</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="category_box toggle_content">
+                {$categoryTree}
+              </div>
+            </li>
+            <li><a href="#" title="Újdonságok" class="left_menu_item">Újdonságok</a></li>
+            <li><a href="{$cartFilename}" title="Kosár tartalma" class="left_menu_item">Kosár tartalma</a></li>
+            <li>
+              <a title="Bejelentkezés" class="toggle_item"><span>Bejelentkezés</span> <i class="fa fa-chevron-down"></i></a>
+              <div class="login_box toggle_content">
+                {if $loguser===false}
+                   <form name="login" action="{$self}" method="post">
+                      <div>
+                        <p class="inputFocus">
+                          <input type="text
               </div>
             </li>
             <li><a href="{$registerFilename}" title="Regisztráció" class="left_menu_item">Regisztráció</a></li>
