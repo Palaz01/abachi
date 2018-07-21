@@ -180,7 +180,7 @@ $(document).ready(function(){
   $('.toggle_item').click(function(){
     $(this).siblings().slideToggle();
     $(this).children('.fa').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
-    $(this).toggleClass('toggle_item_open');
+    $(this).parent().toggleClass('toggle_item_open');
   });
 
   // Custom checkbox
@@ -232,6 +232,16 @@ $(document).ready(function(){
     }
     customQuantity();
 
+    $('#mobile_menu_button').on('click', function(){
+       $('#mobile_menu').addClass('menu-open');
+       $('body').css('overflow-y', 'hidden');
+
+    });
+
+    $('#close_nav').on('click', function(){
+       $('#mobile_menu').removeClass('menu-open');
+       $('body').css('overflow', 'auto');
+    });
    
 });
 
