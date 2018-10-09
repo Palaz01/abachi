@@ -70,7 +70,7 @@
                           {$k_b_cim}
                         {else}
 
-                         <p align="center" class="reg_or_login_text"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
+                         <p class="reg_or_login_text"> A vásárlás folytatásához regisztrálnia kell, vagy ha már regisztrált, akkor be kell jelentkeznie! </p>
 
                          <div class="registration_box">
                             <input type="text" name="loguser" id="loguser" placeholder="E-mail cím"/>

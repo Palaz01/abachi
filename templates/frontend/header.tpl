@@ -277,8 +277,16 @@
     <!--main starts here-->
     <div id="main">
       <div class="intro">
-        <div class="fck">
+        <!--<div class="fck">
           {$fooldalszoveg}
+        </div>-->
+        <div class="intro-image">
+          <img src="" alt="">
+        </div>
+        <div class="intro-text">
+          <h3>Egyedi szaunák tervezése</h3>
+          <p>Javasoljuk, hogy vegye igénybe szakembereink által nyújtott legmegfelelőbb tervezést és tanácsadást. Nagyon fontos a szaunák megépítése előtt, a minél precízebb tervezés és előkészítés. Rendszeresen új akciókkal és kedvezményekkel kedveskedünk vásárloinknak itt a webshopon és Gödöllőn! Tevékenységeink közé tartozik az egyedi finn szaunák építése ( pl. infra szauna, kombi szauna, bio szauna, só szauna, só barlangok, só szobák, hordó szauna házak és gőzkabinok, kül- és beltéri dézsafürdők), szauna alapanyagok gyártása, továbbá kölönféle szauna tartozékok forgalmazása, melyekkel még élvezetesebbé tehető a szaunázás.</p>
+          <a href="">Tovább</a>
         </div>
       </div>
       <!--left column starts here-->

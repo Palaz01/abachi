@@ -969,8 +969,8 @@ p {line-height: 18px;}
     margin-bottom: 5px;
 }
 
-
-.intro {
+/* FCK INTRO STYLES */
+/*.intro {
     overflow: hidden;
     padding: 30px 20px;
     background: #fff;
@@ -979,7 +979,7 @@ p {line-height: 18px;}
 }
 
 .intro .iframe{
-    width: 100%;
+    width: 50%;
     background-color: #e1e1e1;
     margin-bottom: 48px;
 }
@@ -1004,8 +1004,61 @@ p {line-height: 18px;}
     letter-spacing: normal;
     text-align: left;
     color: #252528;
+}*/
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background: #fff;
+    border: solid 1px #bab293;
+    margin-bottom: 60px;
 }
 
+.intro-image {
+    min-width: 450px;
+    height: 325px;
+    background: #b7b7b7;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+}
+
+.intro-text {
+    max-width: calc(100% - 470px);
+    padding-left: 20px;
+}
+
+.intro-text h3 {
+    color: #c06d32;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+
+.intro-text a {
+    color: #c06d32;
+    border: 1px solid #c06d32;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    max-width: 145px;
+}
+
+.intro-text a:hover {
+    background: #c06d32;
+    color: #fff;
+}
 
 .new_stuff_box {
     margin-bottom: 15px;
@@ -1880,6 +1933,7 @@ news_view_page .date {
 .product_item .image {
     width: 420px;
     height: 280px;
+    overflow: hidden;
 }
 
 .product_item .image a {
@@ -2643,6 +2697,7 @@ news_view_page .date {
     line-height: 1.54;
     color: #c06d32;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .cart_page .submit.reg_or_login_buttons {
@@ -3692,6 +3747,24 @@ MEDIA QUERIES
     .intro {
         margin: 0;
         border: none;
+        flex-direction: column;
+    }
+
+    .intro-image {
+        width: 100%;
+        min-width: 0;
+        height: 250px;
+        margin-bottom: 50px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .intro a {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .vodor {
@@ -3830,6 +3903,119 @@ MEDIA QUERIES
         width: 100%;
         height: 200px;
         margin-bottom: 30px;
+    }
+
+    /* Products list page */
+
+    .product_list_page {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .product_list_page .product_item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .product_item .image {
+        width: 100%;
+        max-height: 200px;
+    }
+
+    .product_list_page .product_item:last-child {
+        border-bottom: 0;
+    }
+
+    /* NEWS LIST PAGE */
+
+    .news_list_page .item {
+        flex-direction: column;
+    }
+
+    .news_list_page .item .text_container {
+        width: auto;
+    }
+
+    /* CONTACT PAGE */
+
+    .contact_page_text {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .contact_page_text .google_map {
+        width: 100%;
+    }
+
+    .contact_page .contact_abachi_logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact_page .form .text_inputs, .contact_page .form .textarea {
+        width: 100%;
+    }
+
+    .contact_page .form .check, .contact_page .form .submit {
+        width: 100%;
+    }
+
+    .contact_page .form .submit {
+        margin-top: 70px;
+    }
+
+    .our_contacts {
+        text-align: center;
+    }
+
+    /* Registration page */
+
+    .registration_page .form {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .registration_page .form .item {
+        padding: 0;
+    }
+
+    .registration_page .form .item div {
+        width: 100%;
+    }
+
+
+
+    .registration_page .form .submit {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* Cart page links */
+
+    .cart_page .links {
+        overflow-y: scroll;
+        justify-content: flex-start;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .cart_page div.submit {
+        flex-direction: column;
+    }
+
+    .cart_page div.submit a, .cart_page div.submit input {
+        margin: 0 0 10px 0 !important;
+    }
+
+    .cart_page .reg_or_login_text {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .cart_page select {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     /* Footer */
