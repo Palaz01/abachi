@@ -7,7 +7,7 @@
   <meta name="description" content="{$metaDescription}" />
   <meta name="keywords" content="{$metaKeywords}" />
   <meta name="google-site-verification" content="KytVwp3TMxkxMavrauh5jSXdPnORAPLmnMxE373q9Fk" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0">
   {if $tinyMce}
     <script type="text/javascript" src="inc/tinymce/tiny_mce.js"></script>
     <script type="text/javascript" src="js/frontend-mce.js"></script>
@@ -21,6 +21,7 @@
 
   <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
   <link href="css/jquery.jcarousel.css" type="text/css" rel="stylesheet" />
+  <link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" />
   <link href="css/jquery.fancybox-1.3.1.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
@@ -31,6 +32,7 @@
   <script src="js/jquery.mousewheel-3.0.2.pack.js" type="text/javascript"></script>
   <script src="js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
   <script src="js/jquery.jcarousel.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
   <script src="js/jFav_v1.0.js" type="text/javascript"></script>
   <script type="text/javascript" src="js/jquery.jmpopups-0.5.1.js"></script>
   <script type="text/javascript" src="js/jquery.masonry.min.js"></script>
@@ -286,7 +288,7 @@
         <div class="intro-text">
           <h3>Egyedi szaunák tervezése</h3>
           <p>Javasoljuk, hogy vegye igénybe szakembereink által nyújtott legmegfelelőbb tervezést és tanácsadást. Nagyon fontos a szaunák megépítése előtt, a minél precízebb tervezés és előkészítés. Rendszeresen új akciókkal és kedvezményekkel kedveskedünk vásárloinknak itt a webshopon és Gödöllőn! Tevékenységeink közé tartozik az egyedi finn szaunák építése ( pl. infra szauna, kombi szauna, bio szauna, só szauna, só barlangok, só szobák, hordó szauna házak és gőzkabinok, kül- és beltéri dézsafürdők), szauna alapanyagok gyártása, továbbá kölönféle szauna tartozékok forgalmazása, melyekkel még élvezetesebbé tehető a szaunázás.</p>
-          <a href="">Tovább</a>
+          <a class="a-jo-kurva-anyad" href="">Tovább</a>
         </div>
       </div>
       <!--left column starts here-->

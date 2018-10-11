@@ -20,11 +20,28 @@ $(document).ready(function(){
   
      
   //CAROUSEL 
-  $(".jquery_gallery").jcarousel();
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:3,
+                    nav:true
+                },
+                600:{
+                    items:5,
+                    nav:true,
+                    loop:false
+                }
+            }
+        });
+    });
   
   
   //FANCYBOX
-  $(".jquery_gallery a, .product_view_page a.first, a.fancybox, .masonry a").fancybox({
+  $(".owl-carousel a, .product_view_page a.first, a.fancybox, .masonry a").fancybox({
     'titleShow' : true,
     'transitionIn' : 'elastic',
     'transitionOut' : 'elastic',
