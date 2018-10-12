@@ -163,7 +163,7 @@
           <div class="top">
             <h2>KAPCSOLÓDÓ TERMÉKEK</h2>
           </div>
-           <div>
+           <div class="products_wrap">
            {foreach from=$hasonlo item=h}
              <div class="product">
               <div class="product_image">

@@ -47,32 +47,28 @@
               <div class="form">
 		   <form action="{$formAction}#comment" method="post">
                   <div>
-                    <label>Név</label>
 		  {if $userbelepett!=""}
-		  <input type="text" name="comname" readonly value="{$userbelepett}" />           
+		  <input type="text" name="comname" placeholder="Név" readonly value="{$userbelepett}" />
 		  {else}
-		  <input type="text" name="comname" value="{$comname}" />           
+		  <input type="text" name="comname" placeholder="Név" value="{$comname}" />
 		  {/if}
                   </div>
                   
                   <div>
-                    <label>E-mail</label>
 		    {if $userbelepettemail!=""}                  
-		      <input type="text" name="comemail" readonly value="{$userbelepettemail}" />   
+		      <input type="text" name="comemail" placeholder="e-mail" readonly value="{$userbelepettemail}" />
 		    {else}  
-		      <input type="text" name="comemail" value="{$comemail}" />     
+		      <input type="text" name="comemail" placeholder="e-mail" value="{$comemail}" />
 		    {/if}
                   </div>  
                   
                   <div class="textarea">
-                    <label>Szöveg</label>
 
-                   <textarea name="comtext" wrap="soft" cols="" rows="">{$comtext}</textarea>
+                   <textarea name="comtext" wrap="soft" placeholder="Szöveg" cols="" rows="">{$comtext}</textarea>
                   </div>  
                    
                   <div class="check">
-                    <label>Ellenörző kód</label>
-                    <input name="checkbot" type="text" value=""  />
+                    <input placeholder="Ellenőrző kód" name="checkbot" type="text" value=""  />
                     <img src="/botcheck2.php?r={$rstr}" />
                   </div>   
                   <input type="hidden" name="postcomment" value="1" />

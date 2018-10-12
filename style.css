@@ -1516,6 +1516,10 @@ p {line-height: 18px;}
     margin-bottom: 40px;
 }
 
+.news_view_page .top {
+   line-height: normal;
+}
+
 .news-view-image {
     max-width: 250px;
 }
@@ -1573,7 +1577,6 @@ news_view_page .date {
 .comments, .comment_now {
     margin-top: 10px;
     padding-top: 10px;
-    background: url(images/news_list_divide.gif) no-repeat top center;
 }
 
 .comments h2, .comment_now h2 {
@@ -1586,7 +1589,6 @@ news_view_page .date {
 .comments .ful {
     position: absolute;
     left: -18px;  top: 0;
-    background: url(images/ful.gif) no-repeat;
     width: 18px;  height: 31px;
 }
 
@@ -1621,6 +1623,32 @@ news_view_page .date {
     float: right;
     color: #51300f;
     margin: 0;
+}
+
+
+.comment_now form div {
+    display: flex;
+}
+
+.comment_now input[type='text'], .comment_now .textarea textarea {
+    width: 100%;
+    padding: 13px 10px;
+    margin-bottom: 15px;
+}
+
+.comment_now input[type='submit'] {
+    width: 120px;
+    background-color: #383838;
+    color: #fff;
+    border: 1px solid #383838;
+    height: 40px;
+}
+
+.comment_now .check {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
 }
 
 .comments p {color: #3a5100;}
@@ -2432,6 +2460,10 @@ news_view_page .date {
     margin-bottom: 40px !important;
 }
 
+.kapcsolodo_termek .products_wrap {
+    display: flex;
+}
+
 .kapcsolodo_termek .details_link {
     margin-right: 10px;
 }
@@ -3224,11 +3256,35 @@ news_view_page .date {
     max-width: 100%;
 }
 
-
+.owl-carousel .owl-stage-outer {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev{
-    font-size: 2.5em !important;
+    font-size: 3.5em !important;
+    color: #acacac !important;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: #383838 !important;
+}
+
+.owl-prev {
+    position: absolute;
+    top: 10%;
+    display: block!IMPORTANT;
+    border:0px solid black;
+}
+
+.owl-next {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    display: block!IMPORTANT;
+    border:0px solid black;
 }
 
 
@@ -3934,6 +3990,10 @@ MEDIA QUERIES
         border-bottom: 1px solid #bab293;
     }
 
+    .kapcsolodo_termek .products_wrap{
+        flex-direction: column;
+    }
+
     /* PRODUCTS LIST */
 
     .product_list_page .product_item {
@@ -3981,6 +4041,12 @@ MEDIA QUERIES
 
     .rating {
         margin-top: 20px;
+    }
+
+    /* owl carousel */
+
+    .owl-prev, .owl-next {
+        top: 23%;
     }
 
 
@@ -4056,6 +4122,12 @@ MEDIA QUERIES
         width: 100%;
         height: 200px;
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .owl-prev, .owl-next {
+        top: 10%;
     }
 }
 
