@@ -42,15 +42,13 @@
         <br/><br/><br/><br/>
           <!--gallery starts here-->
         {if $images}
-        <div class="jquery_gallery_container">
-          <div class="jquery_gallery">
-            <ul style=" list-style-type: none">
+
+            <ul style=" list-style-type: none" class="owl-carousel">
             {foreach from=$images item=image}
               <li><a href="{#pt#}upload/articles/{$image.filename}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery"><img style="border:none;" src="{#pt#}upload/articles/{$image.filename}&h=107" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
             {/foreach}
             </ul>
-          </div>
-        </div>
+
         {/if}
 
            

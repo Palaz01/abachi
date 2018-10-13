@@ -10,35 +10,18 @@
             <div class="product">
               <div class="product_info_left">
                 <a class="first" href="{#pt#}{$data.image}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery" title="{$data.title}">
-                    <!--<img class="first" border="0" width="228" src="{#pt#}{$data.image}&w=228&zc=1" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} />-->
-                    <img class="first" border="0" width="228" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} />
+                    <img class="first" border="0" width="228" src="{#pt#}{$data.image}&w=228&zc=1" alt="{$data.imgalt}" title="{$data.imgtitle}" hspace="5" vspace="5" {if !$data.defaultimage}itemprop="image"{/if} />
                 </a>
-
+                  {if $images}
                   <div>
                       <ul style=" list-style-type: none" class="owl-carousel">
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
-                          <li><a href="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000" rel="gallery"><img style="border:none;" src="https://www.leitrimobserver.ie/resizer/750/563/true/1493998017109.jpg--kilkenny_sees_sunshine_at_last_.jpg?1493998018000"/></a></li>
+                          {foreach from=$images item=image}
+                              <li><a href="{#pt#}upload/products/{$image.filename}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery"><img style="border:none;" src="{#pt#}upload/products/{$image.filename}&h=107" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
+                          {/foreach}
                       </ul>
                   </div>
+                  {/if}
 
-
-
-                <!--{if $images}
-                  <div class="jquery_gallery_container">
-                    <div class="jquery_gallery">
-                      <ul style=" list-style-type: none">
-                        {foreach from=$images item=image}
-                          <li><a href="{#pt#}upload/products/{$image.filename}&h=650&fltr[]=wmi|/images/vizjel2.png|C|100" rel="gallery"><img style="border:none;" src="{#pt#}upload/products/{$image.filename}&h=107" alt="{$image.imgalt}" title="{$image.imgtitle}" height="107" /></a></li>
-                        {/foreach}
-                      </ul>
-                    </div>
-                  </div>
-                {/if}-->
                 <p class="manufacturer">A gyártó neve: <a href="{$manufacturerData.filename}.html" title="" itemprop="brand">{$manufacturerData.title}</a></p>
                 {if $manufacturerData.image!==false}
                   <a href="{$manufacturerData.filename}.html"><img src="{$manufacturerData.image}" width="128" alt="{$manufacturerData.imgalt}" title="{$manufacturerData.imgtitle}" border="0" /></a>
