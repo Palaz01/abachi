@@ -243,32 +243,11 @@
 
         <div class="sliderControl">
           {foreach from=$mainpageboxes item=box name=mpbt}
-            <a {if $smarty.foreach.mpbt.first}class="active"{/if} href="#" title=""></a>
+            <a {if $smarty.foreach.mpbt.first}class="active"{/if} href="#" title="">Lorem ipsum</a>
           {/foreach}
         </div>
       </div>
-
-      <ul id="slider_products">
-        <li><a href="#">Egyedi finn szauna építés</a></li>
-        <li><a href="#">Egyedi infra szauna építés</a></li>
-        <li><a href="#">Egyedi kombi szauna építés</a></li>
-        <li><a href="#">Egyedi bio szauna építés</a></li>
-        <li><a href="#">Egyedi só szauna építés</a></li>
-        <li><a href="#">Egyedi hordó szauna ház építés</a></li>
-        <li><a href="#">Egyedi gőzkabin építés</a></li>
-        <li><a href="#">Egyedi kül- és beltéri dézsafürdő építés</a></li>
-      </ul>
-
-      <!--<ul id="slider_products">
-        <li><a href="#">Egyedi finn szauna építés</a></li>
-        <li><a href="#">Egyedi infra szauna építés</a></li>
-        <li><a href="#">Egyedi kombi szauna építés</a></li>
-        <li><a href="#">Egyedi bio szauna építés</a></li>
-        <li><a href="#">Egyedi só szauna építés</a></li>
-        <li><a href="#">Egyedi hordó szauna ház építés</a></li>
-        <li><a href="#">Egyedi gőzkabin építés</a></li>
-        <li><a href="#">Egyedi kül- és beltéri dézsafürdő építés</a></li>
-      </ul>-->
+      
       <!--header img pager ends here-->
     </div>
     <!--header ends here-->
