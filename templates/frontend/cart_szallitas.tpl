@@ -107,38 +107,38 @@ function checkit()
                         <td> 
 {if ($userbelepett!="")}
 <div class="registration_page"  style="width:100%">
- <div class="form">
-           <div class="item">
-                <h3>{$userbelepett}</h3>
-                <p>
-		<div>
-                  <label>Utca, házszám:</label>
-                  <input type="text"  disabled style="width:50%; height:22px;" id="deliverystreet" name="deliverystreet" value="{$k_d_cim}" />
-                  <span>Kötelező kitölteni</span>
-                </div>
+    <div class="form">
+       <div class="item">
+            <h3>{$userbelepett}</h3>
+            <p>
+            <div>
+              <label>Utca, házszám:</label>
+              <input type="text"  disabled style="height:22px;" id="deliverystreet" name="deliverystreet" value="{$k_d_cim}" />
+              <span>Kötelező kitölteni</span>
+            </div>
                 
-                <div>
-                  <label>Irányítószám:</label>
-                  <input type="text" disabled id="deliverypostcode" style="width:50%; height:22px;" name="deliverypostcode" value="{$k_d_irszam}" />
-                  <span>Kötelező kitölteni</span>
-                </div> 
+            <div>
+              <label>Irányítószám:</label>
+              <input type="text" disabled id="deliverypostcode" style="height:22px;" name="deliverypostcode" value="{$k_d_irszam}" />
+              <span>Kötelező kitölteni</span>
+            </div>
                 
-                <div>
-                  <label>Város:</label>
-                  <input type="text" disabled id="deliverycity" style="width:50%; height:22px;" name="deliverycity" value="{$k_d_varos}" />
-                  <span>Kötelező kitölteni</span>
-                </div> 
+            <div>
+              <label>Város:</label>
+              <input type="text" disabled id="deliverycity" style="height:22px;" name="deliverycity" value="{$k_d_varos}" />
+              <span>Kötelező kitölteni</span>
+            </div>
 
-                <div>
-                  <label>Ország:</label>
-                  <select disabled id="deliverycountry" style="width:50%; height:22px;" name="deliverycountry">
-							      {foreach from=$cISO item=country}
-							        <option {if $k_d_orszag==$country}selected="selected"{/if} value="{$country}">{$country}</option>
-							      {/foreach}
-							    </select>
-                </div> 
-              </div>  
-</div>
+            <div>
+                <label>Ország:</label>
+                <select disabled id="deliverycountry" style="height:22px;" name="deliverycountry">
+                  {foreach from=$cISO item=country}
+                    <option {if $k_d_orszag==$country}selected="selected"{/if} value="{$country}">{$country}</option>
+                  {/foreach}
+                </select>
+            </div>
+        </div>
+    </div>
 </div>
 			  {else}
 

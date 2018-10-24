@@ -695,6 +695,7 @@ p {line-height: 18px;}
 
 .login_box {
     display: flex;
+    flex-wrap: wrap;
     padding: 15px 15px;
     background: #303030;
 }
@@ -1807,6 +1808,11 @@ news_view_page .date {
     width: calc(100% - 20px);
 }
 
+.cart-page .registration_page .form .item input[type="text"],
+.cart-page .registration_page .form .item input[type="password"]{
+    width: 100%;
+}
+
 .registration_page select {
     width: 100%;
     background: #fff;
@@ -1817,11 +1823,25 @@ news_view_page .date {
     padding-left: 30px;
 }
 
+
+.cart_page .registration_page .form .item h3 {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
 .registration_page .form .item div {
     width: calc(50% - 60px);
     padding: 0 30px;
     margin-bottom: 20px;
     position: relative;
+}
+
+.cart_page .registration_page .form .item div {
+    width: 100%;
+}
+
+.cart_page .registration_page .form .item  {
+    width: auto;
 }
 
 .registration_page .form .item div .errormessage{
@@ -2862,7 +2882,7 @@ news_view_page .date {
 .cart_page .form input {
     border: 0;
     margin-right: 5px;
-    width: 348px !important;
+    width: 100%;
 }
 
 #previous_orders_submit a {float: left;}
@@ -2959,7 +2979,6 @@ news_view_page .date {
 .cart_page div.submit {
     padding: 15px 20px 0 25px;
     display: flex;
-    width: 100%;
     justify-content: flex-end;
     padding-right: 30px;
 }
@@ -3005,7 +3024,6 @@ news_view_page .date {
 }
 
 .cart_page select {
-    width: 200px;
     margin-right: 110px;
     padding: 15px 0;
     border-color: #bab293;
@@ -3201,12 +3219,24 @@ news_view_page .date {
 }
 
 #previous_orders_page .previous_orders_check {
-    background: url(images/submit.png) no-repeat;
-    color: white;
-    display: block;
-    margin: 5px 0;
-    text-align: center;  text-decoration: none;
-    width: 104px;  height: 29px;  line-height: 29px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #383838;
+    border: 1px solid #383838;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.previous_orders_check.back {
+    padding: 15px 20px;
+    width: 150px;
+}
+
+.previous_orders_check:hover {
+    background: #505050 !important;
+    border-color: #505050 !important;
 }
 
 #previous_orders_page table, #previous_orders_page table td {
@@ -3214,9 +3244,16 @@ news_view_page .date {
     padding: 0;
 }
 
+#previous_orders_page table {
+    margin-bottom: 10px;
+}
+
 #previous_orders_page table td {padding: 0;}
 
-#previous_orders_page table.item {background: url(images/news_list_divide.gif) repeat-x left bottom;}
+#previous_orders_page table .moduleRow {
+    border-bottom: 1px solid #bab293;
+}
+
 
 #previous_orders_page b.title {color: #6e4118;}
 
@@ -3281,12 +3318,10 @@ news_view_page .date {
 
 
 .nameContainer {
-    background: url(images/nameContainer.png) no-repeat;
-    color: #1d0a00;
     font-size: 14px;  font-weight: bold;
     margin: 0 auto 5px auto;
     overflow: hidden;
-    width: 200px;  height: 38px !important;  line-height: 38px;
+    color: #fff;
 }
 
 .orangeLink, .greyLink {
@@ -3296,13 +3331,16 @@ news_view_page .date {
     font-weight: bold;
     margin: 0 auto 5px auto !important;
     text-align: center;  text-decoration: none;
-    width: 97px;  height: 21px;  line-height: 21px;
+    line-height: 21px;
+    border: 1px solid #fff;
+    padding: 5px !important;
+    width: 100%;
 }
 
-.orangeLink {background: url(images/orangeLink.png) no-repeat;}
-
-.greyLink {background: url(images/greyLink.png) no-repeat;}
-
+.orangeLink:hover, .greyLink:hover {
+    background: #fff;
+    color: #303030 !important;
+}
 
 .masonry {margin-bottom: 10px;}
 .masonry .item {
@@ -3906,13 +3944,7 @@ MEDIA QUERIES
         padding-right: 50px;
     }
 
-    .cart_page div.submit {
-        flex-direction: column;
-    }
 
-    .cart_page div.submit a, .cart_page div.submit input {
-        margin: 0 0 10px 0 !important;
-    }
 
     .cart_page .reg_or_login_text {
         text-align: left;
@@ -4116,6 +4148,27 @@ MEDIA QUERIES
         height: 200px;
         margin-bottom: 30px;
     }
+
+    .cart_page .registration_page {
+        border: none;
+    }
+
+    .cart_page div.submit {
+        flex-direction: column;
+        margin-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cart_page div.submit a, .cart_page div.submit input {
+        margin: 0 0 10px 0 !important;
+    }
+
+    #previous_orders_page {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 }
 
 @media screen and (max-width: 400px) {

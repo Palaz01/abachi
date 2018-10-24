@@ -23,7 +23,7 @@
                         <td class="main"><b>{$orderStatuses[$row.status]}</b></td>
                         <td class="main" align="right">{$row.totalsum} Ft</td>
                         <td class="main" align="right">{$row.deliveryprice} Ft</td>
-                        <td class="main" align="right"><a class="previous_orders_check" href="{$row.filename}">MEGTEKINTÉS</a></td>
+                        <td class="main" align="right"><a class="previous_orders_check" href="{$row.filename}" style="margin-left: 10px; width: 10px">&#62;</a></td>
                       </tr>
     
                     {foreachelse}
@@ -46,7 +46,7 @@
               <tr class="infoBoxContents">
                 <td><table border="0" width="100%" cellspacing="0" cellpadding="2">
                   <tr>
-                    <td><a class="previous_orders_check" href="{$usercenterFilename}">VISSZA</a></td>
+                    <td><a class="previous_orders_check back" href="{$usercenterFilename}">VISSZA</a></td>
                   </tr>
                 </table></td>
               </tr>
