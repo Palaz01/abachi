@@ -2199,7 +2199,12 @@ news_view_page .date {
     padding-top: 15px;
     margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+}
+
+.product_view_page .price_container div {
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
 
 .text_container .price_container input,
@@ -2213,15 +2218,18 @@ news_view_page .date {
     border: 1px solid #383838;
 }
 
-.text_container .price_container input {
-    background: #fff;
-    color: #383838;
-}
+
 
 .text_container input {
     background: #383838;
     color: #fff;
     margin-bottom: 60px;
+}
+
+.text_container .price_container input {
+    background: #fff;
+    color: #383838;
+    margin-bottom: 0;
 }
 
 .text_container input:hover {

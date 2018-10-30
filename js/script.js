@@ -184,9 +184,18 @@ $(document).ready(function(){
     $(".headerImgPager .sliderControl").find(".active").removeClass("active");
     
     $(".headerImgPager img").hide();
-    $(".headerImgPager img:eq(" + i + ")").fadeIn(3000);      
+    $(".headerImgPager img:eq(" + i + ")").fadeIn(3000);
 
-    //highlights active page link
+    $(".headerImgPager p").hide();
+    $(".headerImgPager p:eq(" + i + ")").fadeIn(3000);
+
+    $(".headerImgPager h2").hide();
+    $(".headerImgPager h2:eq(" + i + ")").fadeIn(3000);
+
+    $(".headerImgPager .details-btn").hide();
+    $(".headerImgPager .details-btn:eq(" + i + ")").fadeIn(3000);
+
+      //highlights active page link
     $(this).addClass("active");
     
     return false;
